@@ -7,10 +7,8 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
-		<!-- bootstrap -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		
-		<script src="https://kit.fontawesome.com/bb881ac9f5.js" crossorigin="anonymous"></script>
+		<!-- bootstrap 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 
 		<!--<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900i&display=swap" rel="stylesheet"> 
 		
@@ -28,7 +26,7 @@
 		-->
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 
-		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700i&display=swap" rel="stylesheet">  
 	</head>
 	<body>
 		<main>
@@ -45,7 +43,50 @@
 					</div>
 				</div>
 
-				<div id="text-part" class="">
+				<div id="text-part-parent" class="">
+					<div id="plasma-membrane" class="hide-text text-part">
+						<h2> plasma membrane </h2>
+                        <p> Acts as a <b>barrier</b> between the organelles and the outside environment. It also facilitates the passage of oxygen, nutrients and water to service the cell, as well as communication and signalling between other cells. </p>
+					</div> 
+					<div id="ribosome" class="hide-text text-part">
+						<h2> ribosome </h2>
+                        <p> The organelle in charge of <b>protein formation</b> needed for different cell processes. Its location determines its function, although both are structurally identical and interchangeable. Most ribosomes are suspended in the cytosol, known as <b>free ribosomes</b>, while some are attached to the Rough Endoplasmic Reticulum, now classified as a <b>bound ribosome</b>. These bound ribosomes are proteins destined for membrane inclusion, packaging with certain organelles, and export. </p>
+
+					</div> 
+					<div id="nucleus" class="hide-text">
+						<h2> nucleus </h2>
+                        <p>This is the region where the majority of the <b>cell’s genetic material</b> is contained. Usually known as the ‘brain’ of the cell. In eukaryotes, this is called the nucleus which contains a nuclear envelope, nuclear lamina and chromatin which are all designed for protection of and/or transportation of signals from and to the nucleus. </p>
+					</div> 
+					<div id="smooth-endoplasmic-reticulum" class="hide-text">
+                        <h2> smooth endoplasmic 	reticulum </h2>
+                        <p>Functions in <b>metabolic processes</b> like lipid synthesis, carbohydrate metabolism, and drug and poison detoxification. </p>
+
+					</div> 
+					<div id="rough-endoplasmic-reticulum" class="hide-text">
+						<h2> rough endoplasmic reticulum </h2>
+                        <p>Functions like the Smooth ER but has additional duties like the formation of secretory proteins that depart from the organelle and become transport vesicles for the cell. This is also the <b>main site of protein synthesis</b> due to the abundance of ribosomes. It also stores secretory proteins different from the proteins produced by free ribosomes. </p>
+					</div> 
+					<div id="vacuole" class="hide-text">
+						<h2>vacuole</h2>
+                        <p> The main organelle that regularly performs homeostasis. In prokaryotes and animals, they have <b>food vacuoles</b> where they store food from phagocytosis before being digested by the lysosome. </p>
+					</div> 
+					<div id="mitochondrion" class="hide-text">
+						<h2>mitochondrion</h2>
+                  		<p> The site of <b>cellular respiration that produces ATP</b>, the energy that the cell can use. Popularly known as the ‘powerhouse of the cell’ </p>
+					</div> 
+					<div id="golgi-apparatus" class="hide-text">
+						<h2>golgi apparatus</h2>
+                        <p> Acts as the “factory” of the cell, which <b>manufactures, stores, sorts and transports</b> the vesicles made by the Rough ER. It can also produce certain macromolecules and organelles by itself, like lysosomes. </p>
+					</div> 
+					<div id="lysosome" class="hide-text">
+						<h2>lysosome</h2>
+                        <p> Performs <b>intracellular digestion</b>, most frequently phagocytosis. It also digests macromolecules through hydrolysis. As well as regularly performs autophagy, the recycling of one’s own materials </p>
+					</div> 
+					<div id="peroxisome" class="hide-text">
+						<h2>peroxisome</h2>
+                        <p> The oxidative organelle that <b>oxidizes fatty and amino acids in the cell </b>. It also produces hydrogen peroxide (where the name of the cell originates) as well as a catalase that counteracts its toxicity. It also produces a phospholipid precursor that starts the synthesis of lipids and carbohydrates, which then goes to the SER for further synthesis. Lastly, like the lysosome, the peroxisome also regularly performs autophagy.  </p>
+					</div>
+					
 				</div>
 			</div> 
 
@@ -68,6 +109,9 @@
 				<li  onclick="showCellPart('rough-endoplasmic-reticulum')"><a>rough endoplasmic reticulum</a></li>
 				<li  onclick="showCellPart('vacuole')"><a>vacuole</a></li>
 				<li  onclick="showCellPart('mitochondrion')"><a>mitochondrion</a></li>
+				<li  onclick="showCellPart('golgi-apparatus')"><a>golgi apparatus</a></li>
+				<li  onclick="showCellPart('lysosome')"><a>lysosome</a></li>
+				<li  onclick="showCellPart('peroxisome')"><a>peroxisome</a></li>
 			</ul>
 			<a href = "#"><div id="about-us">ABOUT US</div></a>
 		</div>
@@ -107,10 +151,16 @@
 				aContainer.className="hide-container";
 				var anotherContainer = document.getElementById('img-text-container');
 				anotherContainer.className = "show-container";
-				
 				var anImg = document.getElementById('img-part');
 
 				anImg.className = part;
+				var aText = document.getElementsByClassName('show-text');
+				for (i=0;i<aText.length;i++)
+				{
+					aText[i].className="hide-text";
+				}
+				var anotherText = document.getElementById(part);
+				anotherText.className = "show-text text-part";
 			
 			}
 		</script>
