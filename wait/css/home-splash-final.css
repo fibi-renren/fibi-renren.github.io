@@ -1,0 +1,172 @@
+@font-face{
+	src: url(fonts/Roboto-Black.tff);
+	font-family: Roboto;
+}
+	
+	/**modal**/
+.modal-title{
+	font-weight: 900;
+}
+.modal-footer{
+	height: 60px;
+}
+	/*******/
+
+body{
+	margin: 0 ;
+	font-family: 'Anton', sans-serif;
+	background-color: #f1aa7eff;
+}
+
+span{
+	font-size: 10px;
+}
+h1{
+	margin: 0;
+	font-size: 17vw;
+	color: white;
+	line-height: 110%;
+	padding: 0 10px 0 10px;
+}
+
+.floating{
+	margin-top: 3vh;
+}
+
+.floating img{
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.lumpia-wrapper{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.cell, .title, .next, .lumpia-wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.title{
+	line-height: 110%;
+	padding-top: 2vh;
+}
+
+.next{
+	background-color: #f1aa7eff;
+	margin-top: 10vh;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+	display: block;
+	font-size: 15vw;
+	transform:rotate(90deg);
+}
+
+.robot{
+	font-family: Roboto;
+}
+
+	/** animation **/
+.floating{
+	animation-name: floating-cell;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-cell{
+	from {transform:translate(0,-5px);}
+	65% {transform:translate(0,10px);}
+	to {transform:translate(0,-5px);}
+}
+
+.shadow{
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	height: 50px;
+	background-color: #1d5c5eff;
+	animation-name: spooky-shadow;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	border-radius: 50%;
+}
+
+@keyframes spooky-shadow{
+	from {transform: scaleX(0.5);}
+	65% {transform: scaleX(0.85);}
+	to {transform: scaleX(0.5);}
+}
+	/** ********* **/
+
+@media screen and (min-width: 768px){
+	.floating img{
+		width: 50%;
+	} 
+	.shadow {
+		width: 40%;
+	}
+	h1{
+		font-size: 13vw;
+	}
+	a{
+		font-size: 13vw;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.lumpia-wrapper{
+		padding: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: 44% 44% 12%;
+	}
+	.floating img{
+		width: 60%;
+	}
+	.shadow{
+		width: 50%;
+	}
+	h1{
+		font-size: 11vw;
+	}
+	.title{
+		text-align: left;
+		padding: 0;
+	}
+	.next, .title, .cell{
+		margin: 0;
+	}
+	a{
+		transform: rotate(0);
+		font-size: 7vw;
+	}
+		
+	.next:hover{
+		transition: 0.3s;
+		background-color: white;
+	}
+
+	.next:hover a{
+		transition: 0.3s;
+		color: #f1aa7eff;
+	}
+
+}

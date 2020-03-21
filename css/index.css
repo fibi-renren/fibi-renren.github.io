@@ -1,0 +1,86 @@
+
+
+body{
+	margin: 0;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+}
+#containerNav{
+	width:0;
+	height:100vh;
+	position: absolute;
+	top:0;
+}
+#navBar{
+	background-color: white;
+	color: #292929ff;
+	width: 80%;
+	height: 100vh;
+	position: relative;
+	left: -80%;
+	z-index: 9999;
+	padding: 1vh 0 1vh 0;
+	position: relative;
+}
+#navBar ul{
+	padding: 0;
+	margin: 0;
+}
+#navBar>a{
+	text-decoration: none;
+}
+#navBar>a>div{
+	font-size:5vw;
+	padding: 2vh 5vw 2vh 12vw;
+	color: #292929ff;
+}
+#about-us{
+	position: absolute;
+	bottom: 0;	
+}
+#animal-cell{
+	background-color: #fcf9f7ff; 
+}
+#navBar>ul>li{
+	list-style-type: none;
+	line-height: 1;
+	font-size:5vw;
+	padding: 2vh 5vw 2vh 12vw;
+}
+#navBar > ul > li > a{
+	text-decoration: none;
+	color: #292929ff;
+}
+#navBar>ul>li:first-child{
+	border-top: 2px solid #fcf9f7ff;
+}
+#navBar>ul> li:last-child{
+	border-bottom: 2px solid #fcf9f7ff;
+}
+#navBar ul > li:hover{
+	background-color: #f9d74aff;
+	transition: 0.4s;
+}
+#navBar ul > li:hover a{
+	color: #292929ff;
+}
+#menu{
+	margin-left: 6.5%;
+	margin-top: 4%;
+	position: absolute;
+	top: 0;
+	display: flex;
+}
+#menu > a{
+	text-decoration: none;
+	color: #292929ff;
+	padding: 0 2vw;
+}
+#menu > a:first-child{
+	padding:0
+	width: 10px;
+}
+#navBarIcon{
+	width: 7vw;
+}

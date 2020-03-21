@@ -3,65 +3,81 @@
 	<head>
 		<meta charset="UTF-8" />
 		
-		<title>The Animal Cell</title>
-		
-		<script src="https://kit.fontawesome.com/bb881ac9f5.js" crossorigin="anonymous"></script>
+		<title>Eukaryotes</title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
+		<!-- bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		
-		<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet"> 
+		<script src="https://kit.fontawesome.com/bb881ac9f5.js" crossorigin="anonymous"></script>
 
-		<link rel="stylesheet" type="text/css" href="css/home-splash-final.css" />
+		<!--<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900i&display=swap" rel="stylesheet"> 
 		
 		
+		Global site tag (gtag.js) - Google Analytics 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158031938-19"></script>
+		
+		
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-158031938-19');
+		</script>
+		-->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 	</head>
 	<body>
-		
-		<div id="myModal" class="modal fade" tabindex="-1" role="dialog" >
-		  <div class="modal-dialog" role="document">
-			<div class="modal-content">
-			  <div class="modal-header">
-				<h5 class="modal-title robot" ><i>Reminder !</i></h5>
-			  </div>
-			  <div class="modal-body robot">
-				<p>Kindly have your device be connected to the internet, please !! Some of the resources I used require an internet connection to display on the screen. If there are elements missing, then that means your device isn't connected. <br><span>thank u -pb</span><br></p>
-			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary robot" data-dismiss="modal">Close</button>
-			  </div>
-			</div>
-		  </div>
+		<!--navigation bar -->
+		<div id = "containerNav" onclick="toggleNav('close')">
+		</div>
+		<div id = "navBar">
+			<a href = "#"><div id="animal-cell">ANIMAL CELL</div></a>
+			<a href = "#"><div id="plant-cell">PLANT CELL</div></a>
+			<ul>
+				<li><a href ="#">plasma mebrane</a></li>
+				<li><a href ="#">ribsome</a></li>
+				<li><a href ="#">nucleus</a></li>
+				<li><a href ="#">smooth endoplasmic reticulum</a></li>
+				<li><a href ="#">rough endoplasmic reticulum</a></li>
+				<li><a href ="#">vacuole</a></li>
+				<li><a href ="#">mitochondrion</a></li>
+			</ul>
+			<a href = "#"><div id="about-us">ABOUT US</div></a>
 		</div>
 		
-		<main>
-			<div class = "lumpia-wrapper">
-			
-				<div class = "cell">
-					<div class = "floating">
-						<img src = "img/cell.png"/>
-					</div>
-					
-					<div class = "shadow"></div>
-				</div>
-				
-				<div class = "title"> 
-					<h1><i>THE ANIMAL CELL </i></h1> 
-				</div>
-				
-				<div class = "next">
-					<a href = "content-(2nd).html"> <i class="fas fa-arrow-circle-right fa-1x"></i> </a>
-				</div>
-			
-			</div>
-		</main>
+		<div id="menu">
+			<img onclick="toggleNav('show')" id="navBarIcon" src = "svg/menu.svg"/>
+		</div>
 
-		
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		
-		<script> $(function() { $("#myModal").modal('show'); }); </script>
+
+		<script> 
+			function toggleNav(action)
+			{
+				if (action == 'close')
+				{
+					var navBar = document.getElementById('navBar');
+					navBar.style.left = "-80%";
+					navBar.style.boxShadow = "0px 0px 0px blue"; 
+					navBar.style.transition = "0.3s";
+					var aContainer = document.getElementById('containerNav');
+					aContainer.style.width = "0px";
+					aContainer.style.transition= "0.3s";
+				}
+				else 
+				{
+					var navBar = document.getElementById('navBar');
+					navBar.style.left= "0";
+					navBar.style.transition = "0.3s";
+					navBar.style.boxShadow = "1vw 0vh 10px #aea7a7"; 
+					var aContainer = document.getElementById('containerNav');
+					aContainer.style.width = "100vw";
+					aContainer.style.transition= "0.3s";
+				}
+			}
+		</script>
 	</body>
 </html>

@@ -1,0 +1,229 @@
+@font-face{
+	src: url(fonts/Roboto-Black.tff);
+	font-family: Roboto;
+}
+
+.robot{
+	font-family: Roboto;
+	font-size: 3vw;
+}
+
+body{
+	margin: 0;
+	background-color: #f1aa7eff;
+}
+
+	/***menu***/
+.menu-mobile{
+	background-color: white;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 2vh;
+	font-size: 3.5vw;
+}
+.card a{
+	font-size: 3.3vw;
+	color: black;
+	text-decoration: none;
+	padding: 1vh 0;
+	padding-left: 5px;
+}
+.card{
+	margin-bottom: 2vh;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.menu-mobile:hover{
+	border-top: solid 1px white;
+	border-bottom: solid 1px white;
+	background-color: transparent;
+	color: white;
+}
+.card a:hover{
+	transition: 0.3s;
+	background-color: #f2f2f2ff;
+}
+	/**********/
+.ribbon{
+	display: none;
+}
+.placeholder{
+	display: none;
+}	
+.lumpia-wrapper{
+	margin-top: 5vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+.fancy-ribbon, #you{
+	width: 67%;
+}
+.text-content{
+	margin: 2vh 0;
+}
+.text-content span, .text-content-succeeding span{
+	background-color: white;
+	font-size: 3.3vw;
+}
+.robot-dark{
+	font-weight: 700;
+}
+.narrower{
+	padding: 0 5vw;
+}
+.social-media{
+	color: white;
+	margin-top: 10vh;
+}
+.social-media a{
+	text-decoration: none;
+	color: white;
+	padding: 0 3vw;
+	font-size: 3vw;
+}
+
+.desktop{
+	display: none;
+}
+	/***menu for desktop***/
+.placeholder{
+	margin: 2vh 0;
+}
+.placeholder a{
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+}
+.wrapper{
+	transition:1s;
+	position: relative;
+	left: -12.9vw;
+}
+.menu{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	font-size: 2.5vw;
+}
+
+.heyo{
+	left: -18.7vw;
+}
+.meme{
+	left:-17vw;
+}
+.menu span{
+	display: inline-block;
+	padding: 0.5vw;
+	padding-left: 1vw;
+	padding-right: 5vw;
+	background-color: #65babfff;
+}
+.icon{
+	background-color: #5ca9aeff;
+	padding: 0.5vw;
+	font-size: 2.5vw;
+}
+a:hover {
+	transition: 1s;
+	left: 0;
+}
+a:hover .icon{
+	transition: 0.34s;
+	background-color: white;
+	color: #65babfff;
+}
+	/*****************/
+
+@media screen and (min-width: 1024px){
+	main{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.ribbon-mobile{
+		display: none;
+	}
+	.ribbon{
+		position; absolute;
+		padding: 2vh 0;
+		display: block;
+	}
+	.ribbon-desktop{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 37%;
+	}
+	.lumpia-wrapper{
+		height: 100%;
+		display: grid;
+		grid-template-columns: 45% 55%;
+		margin: 0 2vw;
+	}
+	.social-media, .middle, .text-content{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.middle{
+		text-align: center;
+	}
+	.mobile{
+		display: none;
+	}
+	.menu-mobile{
+		display:none;
+	}
+	.desktop{
+		display: block;
+	}
+	.text-content{
+		margin: 0;
+		line-height: 0.75;
+		padding: 0;
+		text-align: right;
+	}
+	.text-content span, .text-content-succeeding span{
+		font-size: 1.4vw;
+	}
+	.narrower{
+		padding: 0;
+		padding-right: 1vw;
+	}
+	#you{
+		width: 70%;
+	}
+	.social-media{
+		margin-top: 0;
+	}
+	.desktop{
+		font-size: 1.3vw;
+		text-align: center;
+		padding: 2vh 0;
+	}
+	.desktop a{
+		font-size: 2.3vw;
+		padding: 0 1vw;
+	}
+	.desktop a:hover{
+		color: #eeeeeeff;
+	}
+	.twinkling{
+		display: none;
+	}
+	.placeholder{
+		display: block;
+	}
+	.mega-lumpia-wrapper{
+		position: absolute;
+		top: 30%;
+	}
+
+}
