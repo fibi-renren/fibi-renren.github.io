@@ -82,3 +82,18 @@ body{
 #navBarIcon{
 	width: 7vw;
 }
+
+/** MAIN CONTENT **/
+#image-container{
+	width:100vw;
+	height: 100vh;
+	position: relative;
+}
+#image{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#animal-cell-img{
+	width: 100vh;
+}
