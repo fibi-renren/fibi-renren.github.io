@@ -181,6 +181,9 @@ body{
     transform: scale(6);
     left: 190%;
  }
+ #text-part-parent{
+ 	border: 1px solid #fcf9f7ff;
+ }
  .text-part>h2{
  	text-align: center;
  	font-size: 7vw;
