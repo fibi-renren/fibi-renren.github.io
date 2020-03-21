@@ -30,7 +30,7 @@ body{
 	text-decoration: none;
 }
 #navBar>a>div{
-	font-size:5vw;
+	font-size:1rem;
 	padding: 2vh 5vw 2vh 12vw;
 	color: #292929ff;
 }
@@ -40,7 +40,7 @@ body{
 #navBar>ul>li{
 	list-style-type: none;
 	line-height: 1;
-	font-size:5vw;
+	font-size:1rem;
 	padding: 2vh 5vw 2vh 12vw;
 	cursor: pointer;
 }
@@ -182,17 +182,22 @@ body{
     left: 190%;
  }
  #text-part-parent{
- 	border: 1px solid #fcf9f7ff;
+ 	border: 1px solid #dadce0;
+ 	border-radius: 3%;
+ }
+ .text-part{
+ 	padding: 1vh;
  }
  .text-part>h2{
  	text-align: center;
- 	font-size: 7vw;
+ 	font-size: 1.2rem;
  	letter-spacing: 0.1em;
  	font-weight: 700;
  	font-style: italic;
  	margin:0;
 }
 .text-part>p{
+	font-size: 1rem;
 	margin: 1vh 0;
 	line-height: 1.4;
 }
