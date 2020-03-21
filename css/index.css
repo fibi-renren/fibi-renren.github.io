@@ -1,5 +1,4 @@
 body{
-	margin: 0;
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
 	position: relative;
@@ -18,7 +17,7 @@ body{
 	background-color: white;
 	color: #292929ff;
 	width: 80%;
-	height: 100vh;
+	height: 100%;
 	left: -80%;
 	z-index: 9999;
 	padding: 1vh 0 1vh 0;
@@ -34,10 +33,6 @@ body{
 	font-size:5vw;
 	padding: 2vh 5vw 2vh 12vw;
 	color: #292929ff;
-}
-#about-us{
-	position: absolute;
-	bottom: 0;	
 }
 #animal-cell{
 	background-color: #fcf9f7ff; 
@@ -120,7 +115,7 @@ body{
 	overflow: scroll;
 }
 #img-part-parent{
-	margin: 1vh 0;
+	margin: 0 0 1vh 0;
 	overflow: hidden;
 }
 #img-part{
@@ -187,7 +182,7 @@ body{
     left: 190%;
  }
  .text-part>h2{
- 	text-align: left;
+ 	text-align: center;
  	font-size: 7vw;
  	letter-spacing: 0.1em;
  	font-weight: 700;
@@ -196,4 +191,5 @@ body{
 }
 .text-part>p{
 	margin: 1vh 0;
+	line-height: 1.4;
 }
