@@ -1,10 +1,9 @@
-
-
 body{
 	margin: 0;
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
 	position: relative;
+	overflow: hidden;
 }
 #containerNav{
 	width:0;
@@ -70,7 +69,6 @@ body{
 	margin-top: 4%;
 	position: absolute;
 	top: 0;
-	display: flex;
 }
 #menu > a{
 	text-decoration: none;
