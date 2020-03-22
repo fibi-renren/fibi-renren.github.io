@@ -37,7 +37,7 @@
 			<div id="img-text-container" class="hide-container">
 				<div id="img-part-parent">
 					<div id="img-part" class="">
-						<img id="animal-cell-img" src = "svg/cell.svg"/>					
+						<img id="animal-cell-img" src = "svg/cell.svg"/>			
 					</div>
 				</div>
 
@@ -97,8 +97,8 @@
 		<div id = "containerNav" onclick="toggleNav('close')">
 		</div>
 		<div id = "navBar">
-			<a href = "index.html"><div id="animal-cell">ANIMAL CELL</div></a>
-			<a href = "#"><div id="plant-cell">PLANT CELL</div></a>
+			<a><div id="animal-cell">ANIMAL CELL</div></a>
+			<a href = "plant-cell.html"><div id="plant-cell">PLANT CELL</div></a>
 			<ul>
 				<li onclick="showCellPart('plasma-membrane')"><a href ="#">plasma mebrane</a></li>
 				<li  onclick="showCellPart('ribosome')"><a>ribsome</a></li>
@@ -111,11 +111,12 @@
 				<li  onclick="showCellPart('lysosome')"><a>lysosome</a></li>
 				<li  onclick="showCellPart('peroxisome')"><a>peroxisome</a></li>
 			</ul>
-			<a href = "#"><div id="about-us">ABOUT US</div></a>
+			<a href = "about-us.html"><div id="about-us">ABOUT US</div></a>
 		</div>
 		
 		<div id="menu">
 			<img onclick="toggleNav('show')" id="navBarIcon" src = "svg/menu.svg"/>
+			<span id="title">Eukaryotes</span>
 		</div>
 
 
@@ -159,6 +160,16 @@
 				}
 				var anotherText = document.getElementById(part);
 				anotherText.className = "show-text text-part";
+				var anIcon = document.getElementById('navBarIcon');
+				var aTitle = document.getElementById('title');
+				if (part != "plasma-membrane"){
+					anIcon.src ="svg/menu-white.svg";
+					aTitle.style.color = "white";
+				}
+				else{
+					anIcon.src ="svg/menu.svg";
+					aTitle.style.color = "#292929ff";
+				}
 			
 			}
 		</script>

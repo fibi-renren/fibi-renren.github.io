@@ -35,14 +35,12 @@ body{
 	padding: 2vh 5vw 2vh 12vw;
 	color: #292929ff;
 }
-#animal-cell{
-	background-color: #fcf9f7ff; 
-}
-#animal-cell:hover, #plant-cell:hover{
-	cursor: pointer;
-}
 #plant-cell{
-	margin-bottom: 1vh;
+	background-color: #fcf9f7ff;
+	margin-bottom: 1vh; 
+}
+#plant-cell:hover, #animal-cell:hover{
+	cursor: pointer;
 }
 #navBar>ul>li{
 	list-style-type: none;
@@ -80,6 +78,7 @@ body{
 	display: inline-block;
 	padding-left: 1.2rem;
 	font-size: 1.1rem;
+	color: #292929ff;
 }
 #navBarIcon{
 	width: 1.5rem;
@@ -134,56 +133,76 @@ body{
 	background-color: red;
 	padding: 1vh 1vw 1vh 1vw;
 }
-.ribosome{
+.plasma-membrane{
 	position: relative;
-	transform: scale(6);
-	bottom: 90%;
+    transform: scale(6);
+    bottom: 110%;
     left: -90%;
 }
+.ribosome{
+	position: relative;
+    transform: scale(4.3);
+    top: 75%;
+    left: -70%;
+}
 .nucleus{
-	transform: scale(5);
+	transform: scale(4.3);
+    position: relative;
+    left: -70%;
+    bottom: 20%;
 }
 .smooth-endoplasmic-reticulum{
 	position: relative;
     transform: scale(3.5);
     top: 20%;
-    left: -100%;
+    left: -55%;
  }
  .rough-endoplasmic-reticulum{
  	position: relative;
     transform: scale(3.2);
-    bottom: 52%;
-    left: -75%;
+    top: 50%;
+    left: -55%;
  }
  .vacuole{
     position: relative;
-    transform: scale(4.5);
-    top: 70%;
-    left: -60%;
+    transform: scale(3);
+    top: 20%;
+    left: 20%;
+
  }
  .mitochondrion{
  	position: relative;
-    transform: scale(3.3);
-    top: 50%;
-    left: 40%;
+    transform: scale(4);
+    top: 70%;
+    left: 80%;
 }
 
 .golgi-apparatus{
     position: relative;
     transform: scale(3.3);
-    left: 75%;
-    bottom: 60%;
+    left: -5%;
+    bottom: 45%;
  }
  .lysosome{
     position: relative;
-    transform: scale(7.5);
-    bottom: 60%;
-    left: 250%;
+    transform: scale(4);
+    top: 105%;
+    left: 40%;
  }
 .peroxisome{
     position: relative;
     transform: scale(6);
-    left: 190%;
+    left: 200%;
+    bottom: 30%;
+ }
+ .cell-wall{
+ 	transform: scale(1);
+ }
+ .chloroplast{
+    position: relative;
+    transform: scale(5);
+    left: 130%;
+    top: 20%;
  }
  .text-part{
  	padding: 1vh;

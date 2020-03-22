@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		
+		<title>About us :> </title>
+		
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+		<!--
+		Global site tag (gtag.js) - Google Analytics 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158031938-19"></script>
+		
+		
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-158031938-19');
+		</script>
+		-->
+		<link rel="stylesheet" type="text/css" href="css/about-us.css" />
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+	</head>
+	<body>
+		<main>
+			<div id="background">
+				<img id="tresMarias" src="svg/about-us.svg"/>
+				<div id="messages">
+					<div id="ella">
+						<p>"hello!! i'm ella and i'm the one that pushed the other two to liking/loving biology! (heh) aside from loving bio, i also draw and write from time to time" -<b>ella</b> </p>
+					</div>
+					<div id="carl">
+						<p> "hey !! im carl and im rlly bodo sa comsci so heh :> pero i support the bio agenda <span>😌</span>, aside from that i do calligraphy and am a math enthusiast hihi"-<b>carl</b></p>
+					</div>
+					<div id="hoebe">
+						<p> "hi hAHAHAHAH shoutout sa Sr2023. labyu guys. hulaan niyo na lang kung sino sino kami sa pic "-<b>phoebe</b></p>
+					</div>
+				</div>
+			</div>
+			
+			<footer>
+				<b>RESOURCES USED: </b>
+				<div>
+					Animal cell by Phoebe using <a href="https://www.britannica.com/science/peroxisome"> this model</a> as reference.
+				</div>
+				<div>
+					Plant cell by Ella using <a href="https://www.britannica.com/science/peroxisome"> this model</a> as reference.
+				</div>
+				<div>
+					Washi tape from <a href = "https://picsart.com/i/sticker-washitape-washi-tape-patternfreetoedit-239552629067212"> here</a>.
+				</div>
+				<div> 
+					Content mostly from Campbell, N. A., Reece, J. B., Mitchell, L. G.(1946).The Cell. <i>Biology</i> (pp.100-124).
+				</div>
+			</footer>
+		</main>
+		<!--navigation bar -->
+
+		<div id = "containerNav" onclick="toggleNav('close')">
+		</div>
+		<div id = "navBar">
+			<a href = "index.html"><div id="animal-cell">ANIMAL CELL</div></a>
+			<a href="plant-cell.html"><div id="plant-cell">PLANT CELL</div></a>
+			<a><div id="about-us">ABOUT US</div></a>
+			<a><div id="resources">RESOURCES</div></a>
+		</div>
+		
+		<div id="menu">
+			<img onclick="toggleNav('show')" id="navBarIcon" src = "svg/menu-white.svg"/>
+			<span>Eukaryotes</span>
+		</div>
+
+
+		<script> 
+			function toggleNav(action)
+			{
+				if (action == 'close')
+				{
+					var navBar = document.getElementById('navBar');
+					navBar.style.left = "-80%";
+					navBar.style.boxShadow = "0px 0px 0px blue"; 
+					navBar.style.transition = "0.3s";
+					var aContainer = document.getElementById('containerNav');
+					aContainer.style.width = "0px";
+					aContainer.style.transition= "0.3s";
+				}
+				else 
+				{
+					var navBar = document.getElementById('navBar');
+					navBar.style.left= "0";
+					navBar.style.transition = "0.3s";
+					navBar.style.boxShadow = "1vw 0vh 10px rgba(141, 141, 141, 0.46)"; 
+					var aContainer = document.getElementById('containerNav');
+					aContainer.style.width = "100vw";
+					aContainer.style.transition= "0.3s";
+				}
+			}
+		</script>
+	</body>
+</html>

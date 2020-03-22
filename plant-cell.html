@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		
+		<title>Eukaryotes</title>
+		
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+		<!--
+		Global site tag (gtag.js) - Google Analytics 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158031938-19"></script>
+		
+		
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-158031938-19');
+		</script>
+		-->
+		<link rel="stylesheet" type="text/css" href="css/plant-cell.css" />
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700i&display=swap" rel="stylesheet">  
+	</head>
+	<body>
+		<main>
+			<div id="image-container" class="show-container">
+				<div id="image">
+					<img id="plant-cell-img" src = "svg/plant-cell.svg"/>
+				</div>
+			</div>
+
+			<div id="img-text-container" class="hide-container">
+				<div id="img-part-parent">
+					<div id="img-part" class="">
+						<img id="plant-cell-img" src = "svg/plant-cell.svg"/>			
+					</div>
+				</div>
+
+				<div id="text-part-parent" class="">
+					<div id="plasma-membrane" class="hide-text text-part">
+						<h2> plasma membrane </h2>
+                        <p> Here, the plasma membrane is colored a dark shade of green, as opposed to cell wall. It acts as a <b>barrier</b> between the organelles and the outside environment. It also facilitates the passage of oxygen, nutrients and water to service the cell, as well as communication and signalling between other cells. </p>
+					</div> 
+					<div id="ribosome" class="hide-text text-part">
+						<h2> ribosome </h2>
+                        <p> The organelle in charge of <b>protein formation</b> needed for different cell processes. Its location determines its function, although both are structurally identical and interchangeable. Most ribosomes are suspended in the cytosol, known as <b>free ribosomes</b>, while some are attached to the Rough Endoplasmic Reticulum, now classified as a <b>bound ribosome</b>. These bound ribosomes are proteins destined for membrane inclusion, packaging with certain organelles, and export. </p>
+
+					</div> 
+					<div id="nucleus" class="hide-text">
+						<h2> nucleus </h2>
+                        <p>This is the region where the majority of the <b>cell’s genetic material</b> is contained. Usually known as the ‘brain’ of the cell. In eukaryotes, this is called the nucleus which contains a nuclear envelope, nuclear lamina and chromatin which are all designed for protection of and/or transportation of signals from and to the nucleus. </p>
+					</div> 
+					<div id="smooth-endoplasmic-reticulum" class="hide-text">
+                        <h2> smooth endoplasmic 	reticulum </h2>
+                        <p>Functions in <b>metabolic processes</b> like lipid synthesis, carbohydrate metabolism, and drug and poison detoxification. </p>
+
+					</div> 
+					<div id="rough-endoplasmic-reticulum" class="hide-text">
+						<h2> rough endoplasmic reticulum </h2>
+                        <p>Functions like the Smooth ER but has additional duties like the formation of secretory proteins that depart from the organelle and become transport vesicles for the cell. This is also the <b>main site of protein synthesis</b> due to the abundance of ribosomes. It also stores secretory proteins different from the proteins produced by free ribosomes. </p>
+					</div> 
+					<div id="vacuole" class="hide-text">
+						<h2>vacuole</h2>
+                        <p> The main organelle that regularly performs homeostasis. In prokaryotes and animals, they have <b>food vacuoles</b> where they store food from phagocytosis before being digested by the lysosome. </p>
+					</div> 
+					<div id="mitochondrion" class="hide-text">
+						<h2>mitochondrion</h2>
+                  		<p> The site of <b>cellular respiration that produces ATP</b>, the energy that the cell can use. Popularly known as the ‘powerhouse of the cell’ </p>
+					</div> 
+					<div id="golgi-apparatus" class="hide-text">
+						<h2>golgi apparatus</h2>
+                        <p> Acts as the “factory” of the cell, which <b>manufactures, stores, sorts and transports</b> the vesicles made by the Rough ER. It can also produce certain macromolecules and organelles by itself, like lysosomes. </p>
+					</div> 
+					<div id="lysosome" class="hide-text">
+						<h2>lysosome</h2>
+                        <p> Performs <b>intracellular digestion</b>, most frequently phagocytosis. It also digests macromolecules through hydrolysis. As well as regularly performs autophagy, the recycling of one’s own materials </p>
+					</div> 
+					<div id="peroxisome" class="hide-text">
+						<h2>peroxisome</h2>
+                        <p> The oxidative organelle that <b>oxidizes fatty and amino acids in the cell </b>. It also produces hydrogen peroxide (where the name of the cell originates) as well as a catalase that counteracts its toxicity. It also produces a phospholipid precursor that starts the synthesis of lipids and carbohydrates, which then goes to the SER for further synthesis. Lastly, like the lysosome, the peroxisome also regularly performs autophagy.  </p>
+					</div>
+					<div id="cell-wall" class="hide-text">
+						<h2>cell wall</h2>
+                        <p> Like the plasma membrane, it’s the framework of the cell but it provides a <b>thicker barrier</b> for the cell which prevents overexpansion . This thickness also regulates diffusion and prevents water loss in the cell.</p>
+					</div>
+					<div id="chloroplast" class="hide-text">
+						<h2>chloroplast</h2>
+                        <p> The <b>site of photosynthesis</b> where plants get their food, and works hand in hand with the mitochondria to efficiently extract energy from sunlight, water and oxygen (ingredients of photosynthesis).</p>
+					</div>
+					
+				</div>
+			</div> 
+
+		</main>
+
+
+
+		<!--navigation bar -->
+
+		<div id = "containerNav" onclick="toggleNav('close')">
+		</div>
+		<div id = "navBar">
+			<a href = "index.html"><div id="animal-cell">ANIMAL CELL</div></a>
+			<a><div id="plant-cell">PLANT CELL</div></a>
+			<ul>
+				<li onclick="showCellPart('plasma-membrane');changeMenu('yes')"><a href ="#">plasma mebrane</a></li>
+				<li  onclick="showCellPart('ribosome');changeMenu('yes')"><a>ribsome</a></li>
+				<li  onclick="showCellPart('nucleus');changeMenu('yes')" ><a>nucleus</a></li>
+				<li  onclick="showCellPart('smooth-endoplasmic-reticulum');changeMenu('yes')"><a>smooth endoplasmic reticulum</a></li>
+				<li  onclick="showCellPart('rough-endoplasmic-reticulum');changeMenu('yes')"><a>rough endoplasmic reticulum</a></li>
+				<li  onclick="showCellPart('vacuole');changeMenu('yes')"><a>vacuole</a></li>
+				<li  onclick="showCellPart('mitochondrion');changeMenu('no')"><a>mitochondrion</a></li>
+				<li  onclick="showCellPart('golgi-apparatus');changeMenu('yes')"><a>golgi apparatus</a></li>
+				<li  onclick="showCellPart('lysosome');changeMenu('no')"><a>lysosome</a></li>
+				<li  onclick="showCellPart('peroxisome');changeMenu('no')"><a>peroxisome</a></li>
+				<li  onclick="showCellPart('cell-wall');changeMenu('no')" ><a>cell wall</a></li>
+				<li  onclick="showCellPart('chloroplast');changeMenu('yes')"><a>chloroplast</a></li>
+			</ul>
+			<a href = "about-us.html"><div id="about-us">ABOUT US</div></a>
+		</div>
+		
+		<div id="menu">
+			<img onclick="toggleNav('show')" id="navBarIcon" src = "svg/menu.svg"/>
+			<span id="title">Eukaryotes</span>
+		</div>
+
+
+		<script> 
+			function toggleNav(action)
+			{
+				if (action == 'close')
+				{
+					var navBar = document.getElementById('navBar');
+					navBar.style.left = "-80%";
+					navBar.style.boxShadow = "0px 0px 0px blue"; 
+					navBar.style.transition = "0.3s";
+					var aContainer = document.getElementById('containerNav');
+					aContainer.style.width = "0px";
+					aContainer.style.transition= "0.3s";
+				}
+				else 
+				{
+					var navBar = document.getElementById('navBar');
+					navBar.style.left= "0";
+					navBar.style.transition = "0.3s";
+					navBar.style.boxShadow = "1vw 0vh 10px rgba(141, 141, 141, 0.46)"; 
+					var aContainer = document.getElementById('containerNav');
+					aContainer.style.width = "100vw";
+					aContainer.style.transition= "0.3s";
+				}
+			}
+			function showCellPart(part)
+			{
+				var aContainer = document.getElementById('image-container');
+				aContainer.className="hide-container";
+				var anotherContainer = document.getElementById('img-text-container');
+				anotherContainer.className = "show-container";
+				var anImg = document.getElementById('img-part');
+				anImg.className = part;
+				var aText = document.getElementsByClassName('show-text');
+				for (i=0;i<aText.length;i++)
+				{
+					aText[i].className="hide-text";
+				}
+				var anotherText = document.getElementById(part);
+				anotherText.className = "show-text text-part";
+			}
+
+			function changeMenu(answer)
+			{
+				var anIcon = document.getElementById('navBarIcon');
+				var aTitle = document.getElementById('title');
+				if (answer=="yes")
+				{
+					anIcon.src = "svg/menu-white.svg";
+					aTitle.style.color = "white";
+				}
+				else{
+					anIcon.src = "svg/menu.svg";
+					aTitle.style.color = "#292929ff";
+				}
+			}
+		</script>
+	</body>
+</html>
