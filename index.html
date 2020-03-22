@@ -27,16 +27,24 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700i&display=swap" rel="stylesheet">  
 	</head>
 	<body>
+		<div id="bearer-of-the-truth" onclick="exitMessage()">
+		</div>
+		<div id="message-container">
+			<div id="message">
+					Hello!! If it isn't too much to ask, please make sure you're viewing this on Google Chrome. Nothing against other browsers, it's just that some of the features here don't work in other browsers such as Firefox. Thank you for understanding!!  
+			</div> 
+		</div>
+
 		<main>
-			<div id="image-container" class="show-container">
+			<div id="image-container">
 				<div id="image">
 					<img id="animal-cell-img" src = "svg/cell.svg"/>
 				</div>
 			</div>
 
-			<div id="img-text-container" class="hide-container">
+			<div id="img-text-container">
 				<div id="img-part-parent">
-					<div id="img-part" class="">
+					<div id="img-part">
 						<img id="animal-cell-img" src = "svg/cell.svg"/>			
 					</div>
 				</div>
@@ -121,6 +129,12 @@
 
 
 		<script> 
+			function exitMessage()
+			{
+				document.getElementById('bearer-of-the-truth').style.display="none";
+				document.getElementById('message-container').style.transition = "0.4s";
+				document.getElementById('message-container').style.top = "-100%";				
+			}
 			function toggleNav(action)
 			{
 				if (action == 'close')
@@ -147,9 +161,10 @@
 			function showCellPart(part)
 			{
 				var aContainer = document.getElementById('image-container');
-				aContainer.className="hide-container";
+				aContainer.style.display="none";
 				var anotherContainer = document.getElementById('img-text-container');
-				anotherContainer.className = "show-container";
+				anotherContainer.style.display="block";
+				
 				var anImg = document.getElementById('img-part');
 
 				anImg.className = part;
