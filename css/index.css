@@ -2,6 +2,9 @@ body{
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
 	position: relative;
+	width: 100vw;
+	height: auto;
+	margin:0;
 }
 #bearer-of-the-truth{
 	background-color: #0303038c;
@@ -46,10 +49,9 @@ body{
 	background-color: white;
 	color: #292929ff;
 	width: 80%;
-	height: 100%;
+	height: 100vh;
 	left: -80%;
-	z-index: 9999;
-	padding: 1vh 0 1vh 0;
+	overflow: scroll;
 }
 #navBar ul{
 	padding: 0;
@@ -117,21 +119,19 @@ body{
 #image-container{
 	width:100vw;
 	height: 100vh;
-	position: relative;
 	transition: 0.5s;
 	display: block;
 }
 #image{
-	padding: 0 3vw 0 3vw;
-	position: absolute;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center; 
 }
 #animal-cell-img{
-	width: 100%;
+	width: 95%;
 }
 .show-container,.show-text{
 	display: block;
@@ -140,9 +140,7 @@ body{
 	display: none;
 }
 #img-text-container{
-	width: 100vw;
 	height: 100vh;
-	display: grid;
 	grid-template-rows: 70% auto;
 	padding: 2vh 3vw 2vh 3vw;
 	transition: 0.5s;
@@ -161,7 +159,6 @@ body{
 	transition: 0.5s;
 }
 #text-part{
-	background-color: red;
 	padding: 1vh 1vw 1vh 1vw;
 }
 .ribosome{
@@ -221,7 +218,7 @@ body{
  .text-part>h2{
  	text-align: center;
  	font-size: 1.2rem;
- 	letter-spacing: 0.1em;
+ 	letter-spacing: 0.1rem;
  	font-weight: 700;
  	font-style: italic;
  	margin:0;

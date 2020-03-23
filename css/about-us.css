@@ -2,6 +2,7 @@ body{
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
 	position: relative;
+	margin:0;
 }
 #containerNav{
 	width:0;

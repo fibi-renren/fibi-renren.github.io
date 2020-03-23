@@ -7,8 +7,6 @@
 		
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		
 		<!--
 		Global site tag (gtag.js) - Google Analytics 
@@ -157,11 +155,14 @@
 			function showCellPart(part)
 			{
 				var aContainer = document.getElementById('image-container');
-				aContainer.className="hide-container";
+				aContainer.style.display="none";
 				var anotherContainer = document.getElementById('img-text-container');
-				anotherContainer.className = "show-container";
+				anotherContainer.style.display="grid";
+				
+				//zoom zoom
 				var anImg = document.getElementById('img-part');
 				anImg.className = part;
+
 				var aText = document.getElementsByClassName('show-text');
 				for (i=0;i<aText.length;i++)
 				{

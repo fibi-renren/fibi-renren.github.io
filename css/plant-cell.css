@@ -1,8 +1,13 @@
+html{
+	margin:0;
+}
 body{
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
 	position: relative;
-	overflow: hidden;
+	width: 100vw;
+	height: auto;
+	margin:0;
 }
 #containerNav{
 	width:0;
@@ -17,10 +22,8 @@ body{
 	background-color: white;
 	color: #292929ff;
 	width: 80%;
-	height: 100%;
+	height: 100vh;
 	left: -80%;
-	z-index: 9999;
-	padding: 1vh 0 1vh 0;
 	overflow: scroll;
 }
 #navBar ul{
@@ -88,20 +91,19 @@ body{
 #image-container{
 	width:100vw;
 	height: 100vh;
-	position: relative;
 	transition: 0.5s;
+	display: block;
 }
 #image{
-	padding: 0 3vw 0 3vw;
-	position: absolute;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center; 
 }
-#animal-cell-img{
-	width: 100%;
+#plant-cell-img{
+	width: 95%;
 }
 .show-container,.show-text{
 	display: block;
@@ -110,11 +112,10 @@ body{
 	display: none;
 }
 #img-text-container{
-	width: 100vw;
-	height: 100vh;
-	display: grid;
-	grid-template-rows: 70% auto;
-	padding: 2vh 3vw 2vh 3vw;
+	height: 95vh;
+	display: none;
+	grid-template-rows: 70% 30%;
+	padding: 2vh 3vw 0vh 3vw;
 	transition: 0.5s;
 	overflow: scroll;
 }

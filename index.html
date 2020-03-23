@@ -7,8 +7,6 @@
 		
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		
 		<!--
 		Global site tag (gtag.js) - Google Analytics 
@@ -163,11 +161,13 @@
 				var aContainer = document.getElementById('image-container');
 				aContainer.style.display="none";
 				var anotherContainer = document.getElementById('img-text-container');
-				anotherContainer.style.display="block";
+				anotherContainer.style.display="grid";
 				
+				//zooms in the pic
 				var anImg = document.getElementById('img-part');
-
 				anImg.className = part;
+
+				//shows the div text that contains the description
 				var aText = document.getElementsByClassName('show-text');
 				for (i=0;i<aText.length;i++)
 				{
@@ -175,6 +175,8 @@
 				}
 				var anotherText = document.getElementById(part);
 				anotherText.className = "show-text text-part";
+
+				//changes the color of the menu and the title
 				var anIcon = document.getElementById('navBarIcon');
 				var aTitle = document.getElementById('title');
 				if (part != "plasma-membrane"){
