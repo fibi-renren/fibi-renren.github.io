@@ -1,5 +1,6 @@
 html{
 	margin:0;
+	font-size: 100%;
 }
 body{
 	background-color: white;
@@ -131,7 +132,6 @@ body{
 	transition: 0.5s;
 }
 #text-part{
-	background-color: red;
 	padding: 1vh 1vw 1vh 1vw;
 }
 .plasma-membrane{

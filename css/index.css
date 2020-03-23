@@ -1,3 +1,7 @@
+html{
+	font-size: 100%;
+	margin:0;
+}
 body{
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
@@ -51,7 +55,6 @@ body{
 	width: 80%;
 	height: 100vh;
 	left: -80%;
-	overflow: scroll;
 }
 #navBar ul{
 	padding: 0;
@@ -110,6 +113,7 @@ body{
 	display: inline-block;
 	padding-left: 1.2rem;
 	font-size: 1.1rem;
+	color: #292929ff;
 }
 #navBarIcon{
 	width: 1.5rem;
@@ -140,12 +144,12 @@ body{
 	display: none;
 }
 #img-text-container{
-	height: 100vh;
-	grid-template-rows: 70% auto;
-	padding: 2vh 3vw 2vh 3vw;
+	height: 95vh;
+	display: none;
+	grid-template-rows: 70% 30%;
+	padding: 2vh 3vw 0vh 3vw;
 	transition: 0.5s;
 	overflow: scroll;
-	display: none;
 }
 #img-part-parent{
 	overflow: hidden;
