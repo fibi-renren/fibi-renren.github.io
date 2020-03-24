@@ -25,11 +25,10 @@ html{
 	top: 10vh;
 	z-index: 10000;
 	background-color: white;
-	padding: 2vh 3vw 2vh 3vw;
-	font-size: 4vw;
+	padding: 1rem 1rem;
+	font-size: 0.85rem;
 	transition: 0.4s;
 }
-
 body{
 	margin:2vh 0;
 	width: 100vw;
@@ -102,4 +101,24 @@ a{
 	color: white;
 	width: 80%;
 	height: auto;
+}
+@media screen and (min-width: 1000px){
+	#message{
+		width: 30%;
+		line-height: 1.5;
+	}
+	body{
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	}
+	body>h1,body>h2{
+		display: none;
+	}
+	a{
+		width: 20%;
+		height: auto;
+	}
 }

@@ -58,10 +58,10 @@ body{
 	color: #292929ff;
 }
 #navBar>ul>li:first-child{
-	border-top: 2px solid #fcf9f7ff;
+	border-top: 0.1rem solid #fcf9f7ff;
 }
 #navBar>ul> li:last-child{
-	border-bottom: 2px solid #fcf9f7ff;
+	border-bottom: 0.1rem solid #fcf9f7ff;
 }
 #navBar ul > li:hover{
 	background-color: #f9d74aff;
