@@ -20,29 +20,29 @@
 		  gtag('config', 'UA-158031938-19');
 		</script>
 		-->
-		<link rel="stylesheet" type="text/css" href="css/plant-cell.css" />
+		<link rel="stylesheet" type="text/css" href="css/animal-cell.css" />
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700i&display=swap" rel="stylesheet">  
 	</head>
 	<body>
 		<main>
-			<div id="image-container" class="show-container">
+			<div id="image-container">
 				<div id="image">
-					<img id="plant-cell-img" src = "svg/plant-cell.svg"/>
+					<img id="animal-cell-img" src = "svg/cell.svg"/>
 				</div>
 			</div>
 
-			<div id="img-text-container" class="hide-container">
+			<div id="img-text-container">
 				<div id="img-part-parent">
-					<div id="img-part" class="">
-						<img id="plant-cell-img" src = "svg/plant-cell.svg"/>			
+					<div id="img-part">
+						<img id="animal-cell-img" src = "svg/cell.svg"/>			
 					</div>
 				</div>
 
 				<div id="text-part-parent" class="">
 					<div id="plasma-membrane" class="hide-text text-part">
 						<h2> plasma membrane </h2>
-                        <p> Here, the plasma membrane is colored a dark shade of green, as opposed to cell wall. It acts as a <b>barrier</b> between the organelles and the outside environment. It also facilitates the passage of oxygen, nutrients and water to service the cell, as well as communication and signalling between other cells. </p>
+                        <p> Acts as a <b>barrier</b> between the organelles and the outside environment. It also facilitates the passage of oxygen, nutrients and water to service the cell, as well as communication and signalling between other cells. </p>
 					</div> 
 					<div id="ribosome" class="hide-text text-part">
 						<h2> ribosome </h2>
@@ -82,14 +82,6 @@
 						<h2>peroxisome</h2>
                         <p> The oxidative organelle that <b>oxidizes fatty and amino acids in the cell </b>. It also produces hydrogen peroxide (where the name of the cell originates) as well as a catalase that counteracts its toxicity. It also produces a phospholipid precursor that starts the synthesis of lipids and carbohydrates, which then goes to the SER for further synthesis. Lastly, like the lysosome, the peroxisome also regularly performs autophagy.  </p>
 					</div>
-					<div id="cell-wall" class="hide-text">
-						<h2>cell wall</h2>
-                        <p> Like the plasma membrane, it’s the framework of the cell but it provides a <b>thicker barrier</b> for the cell which prevents overexpansion . This thickness also regulates diffusion and prevents water loss in the cell.</p>
-					</div>
-					<div id="chloroplast" class="hide-text">
-						<h2>chloroplast</h2>
-                        <p> The <b>site of photosynthesis</b> where plants get their food, and works hand in hand with the mitochondria to efficiently extract energy from sunlight, water and oxygen (ingredients of photosynthesis).</p>
-					</div>
 					
 				</div>
 			</div> 
@@ -103,21 +95,19 @@
 		<div id = "containerNav" onclick="toggleNav('close')">
 		</div>
 		<div id = "navBar">
-			<a href = "animal-cell.html"><div id="animal-cell">ANIMAL CELL</div></a>
-			<a><div id="plant-cell">PLANT CELL</div></a>
+			<a><div id="animal-cell">ANIMAL CELL</div></a>
+			<a href = "plant-cell.html"><div id="plant-cell">PLANT CELL</div></a>
 			<ul>
-				<li onclick="showCellPart('plasma-membrane');changeMenu('yes')"><a href ="#">plasma mebrane</a></li>
-				<li  onclick="showCellPart('ribosome');changeMenu('yes')"><a>ribsome</a></li>
-				<li  onclick="showCellPart('nucleus');changeMenu('yes')" ><a>nucleus</a></li>
-				<li  onclick="showCellPart('smooth-endoplasmic-reticulum');changeMenu('yes')"><a>smooth endoplasmic reticulum</a></li>
-				<li  onclick="showCellPart('rough-endoplasmic-reticulum');changeMenu('yes')"><a>rough endoplasmic reticulum</a></li>
-				<li  onclick="showCellPart('vacuole');changeMenu('yes')"><a>vacuole</a></li>
-				<li  onclick="showCellPart('mitochondrion');changeMenu('no')"><a>mitochondrion</a></li>
-				<li  onclick="showCellPart('golgi-apparatus');changeMenu('yes')"><a>golgi apparatus</a></li>
-				<li  onclick="showCellPart('lysosome');changeMenu('no')"><a>lysosome</a></li>
-				<li  onclick="showCellPart('peroxisome');changeMenu('no')"><a>peroxisome</a></li>
-				<li  onclick="showCellPart('cell-wall');changeMenu('no')" ><a>cell wall</a></li>
-				<li  onclick="showCellPart('chloroplast');changeMenu('yes')"><a>chloroplast</a></li>
+				<li onclick="showCellPart('plasma-membrane')"><a href ="#">plasma mebrane</a></li>
+				<li  onclick="showCellPart('ribosome')"><a>ribsome</a></li>
+				<li  onclick="showCellPart('nucleus')"><a>nucleus</a></li>
+				<li  onclick="showCellPart('smooth-endoplasmic-reticulum')"><a>smooth endoplasmic reticulum</a></li>
+				<li  onclick="showCellPart('rough-endoplasmic-reticulum')"><a>rough endoplasmic reticulum</a></li>
+				<li  onclick="showCellPart('vacuole')"><a>vacuole</a></li>
+				<li  onclick="showCellPart('mitochondrion')"><a>mitochondrion</a></li>
+				<li  onclick="showCellPart('golgi-apparatus')"><a>golgi apparatus</a></li>
+				<li  onclick="showCellPart('lysosome')"><a>lysosome</a></li>
+				<li  onclick="showCellPart('peroxisome')"><a>peroxisome</a></li>
 			</ul>
 			<a href = "about-us.html"><div id="about-us">ABOUT US</div></a>
 		</div>
@@ -159,10 +149,11 @@
 				var anotherContainer = document.getElementById('img-text-container');
 				anotherContainer.style.display="grid";
 				
-				//zoom zoom
+				//zooms in the pic
 				var anImg = document.getElementById('img-part');
 				anImg.className = part;
 
+				//shows the div text that contains the description
 				var aText = document.getElementsByClassName('show-text');
 				for (i=0;i<aText.length;i++)
 				{
@@ -170,21 +161,19 @@
 				}
 				var anotherText = document.getElementById(part);
 				anotherText.className = "show-text text-part";
-			}
 
-			function changeMenu(answer)
-			{
+				//changes the color of the menu and the title
 				var anIcon = document.getElementById('navBarIcon');
 				var aTitle = document.getElementById('title');
-				if (answer=="yes")
-				{
-					anIcon.src = "svg/menu-white.svg";
+				if (part != "plasma-membrane"){
+					anIcon.src ="svg/menu-white.svg";
 					aTitle.style.color = "white";
 				}
 				else{
-					anIcon.src = "svg/menu.svg";
+					anIcon.src ="svg/menu.svg";
 					aTitle.style.color = "#292929ff";
 				}
+			
 			}
 		</script>
 	</body>

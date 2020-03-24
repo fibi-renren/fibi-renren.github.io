@@ -1,15 +1,7 @@
 html{
 	font-size: 100%;
-	margin:0;
 }
-body{
-	background-color: white;
-	font-family: 'Roboto', sans-serif;
-	position: relative;
-	width: 100vw;
-	height: auto;
-	margin:0;
-}
+
 #bearer-of-the-truth{
 	background-color: #0303038c;
 	position: absolute;
@@ -33,202 +25,81 @@ body{
 	top: 10vh;
 	z-index: 10000;
 	background-color: white;
-	border: 0.5vw solid #c8c8c8;
 	padding: 2vh 3vw 2vh 3vw;
 	font-size: 4vw;
-	border-radius: 3%;
 	transition: 0.4s;
 }
 
-#containerNav{
-	width:0;
-	height:100vh;
-	position: absolute;
-	top:0;
-}
-#navBar{
-	top:0;
-	z-index: 9999;
-	position: absolute;
+body{
+	margin:2vh 0;
+	width: 100vw;
+	height: auto;
 	background-color: white;
-	color: #292929ff;
-	width: 80%;
-	height: 100vh;
-	left: -80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Roboto', sans-serif;
 }
-#navBar ul{
-	padding: 0;
-	margin: 0;
+body>h1{
+	font-style: italic;
+	font-size: 1.2rem;
 }
-#navBar>a{
-	text-decoration: none;
+body>h2{
+	font-style: italic;
+	font-size: 0.7rem;
+	margin:0;
 }
-#navBar>a>div{
-	font-size:1rem;
-	padding: 2vh 5vw 2vh 12vw;
-	color: #292929ff;
+#animal-cell,#plant-cell,#about-us{
+	width:100%;
+	height: 20vh;
+	margin: 2vh 0;
+	position: relative;
 }
 #animal-cell{
-	background-color: #fcf9f7ff; 
+	margin: 4vh 0;
 }
-#animal-cell:hover, #plant-cell:hover{
-	cursor: pointer;
-}
-#plant-cell{
-	margin-bottom: 1vh;
-}
-#navBar>ul>li{
-	list-style-type: none;
-	line-height: 1;
-	font-size:1rem;
-	padding: 2vh 5vw 2vh 12vw;
-	cursor: pointer;
-}
-#navBar > ul > li > a{
-	text-decoration: none;
-	color: #292929ff;
-}
-#navBar>ul>li:first-child{
-	border-top: 2px solid #fcf9f7ff;
-}
-#navBar>ul> li:last-child{
-	border-bottom: 2px solid #fcf9f7ff;
-}
-#navBar ul > li:hover{
-	background-color: #f9d74aff;
-	transition: 0.4s;
-}
-#navBar ul > li:hover a{
-	color: #292929ff;
-}
-#menu{
-	margin-left: 6.5%;
-	margin-top: 6%;
-	position: absolute;
-	top: 0;
-	display: flex;
-	flex-direction: row;
-}
-#menu>span{
+#about-us span,#animal-cell span, #plant-cell span{
+	color: white;
 	display: inline-block;
-	padding-left: 1.2rem;
-	font-size: 1.1rem;
-	color: #292929ff;
+	position: absolute;
+	bottom: 0;
+	padding: 0 0vw 1vh 3vw;
+	font-style: 1rem;
 }
-#navBarIcon{
-	width: 1.5rem;
-}
-
-/** MAIN CONTENT **/
-#image-container{
-	width:100vw;
-	height: 100vh;
-	transition: 0.5s;
-	display: block;
-}
-#image{
-	width: 100vw;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center; 
-}
-#animal-cell-img{
-	width: 95%;
-}
-.show-container,.show-text{
-	display: block;
-}
-.hide-container,.hide-text{
-	display: none;
-}
-#img-text-container{
-	height: 95vh;
-	display: none;
-	grid-template-rows: 70% 30%;
-	padding: 2vh 3vw 0vh 3vw;
-	transition: 0.5s;
-	overflow: scroll;
-}
-#img-part-parent{
+.img-container,.shadow{
+	width: 100%;
+	height: 100%;	
 	overflow: hidden;
 }
-#img-part{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	transition: 0.5s;
-}
-#text-part{
-	padding: 1vh 1vw 1vh 1vw;
-}
-.ribosome{
+#animal-cell img, #plant-cell img{
+	width:100%;
+	transform: scale(1.5);
 	position: relative;
-	transform: scale(6);
-	bottom: 90%;
-    left: -90%;
+	bottom: 60%;
+	transition: 0.4s;
 }
-.nucleus{
-	transform: scale(5);
+#animal-cell:hover img, #plant-cell:hover img{
+	transform: scale(2);
+	transition: 0.4s;
 }
-.smooth-endoplasmic-reticulum{
-	position: relative;
-    transform: scale(3.5);
-    top: 20%;
-    left: -100%;
- }
- .rough-endoplasmic-reticulum{
- 	position: relative;
-    transform: scale(3.2);
-    bottom: 52%;
-    left: -75%;
- }
- .vacuole{
-    position: relative;
-    transform: scale(4.5);
-    top: 70%;
-    left: -60%;
- }
- .mitochondrion{
- 	position: relative;
-    transform: scale(3.3);
-    top: 50%;
-    left: 40%;
+#about-us img{
+	width:100%;
 }
-
-.golgi-apparatus{
-    position: relative;
-    transform: scale(3.3);
-    left: 75%;
-    bottom: 60%;
- }
- .lysosome{
-    position: relative;
-    transform: scale(7.5);
-    bottom: 60%;
-    left: 250%;
- }
-.peroxisome{
-    position: relative;
-    transform: scale(6);
-    left: 190%;
- }
- .text-part{
- 	padding: 1vh;
- }
- .text-part>h2{
- 	text-align: center;
- 	font-size: 1.2rem;
- 	letter-spacing: 0.1rem;
- 	font-weight: 700;
- 	font-style: italic;
- 	margin:0;
+#animal-cell:hover .shadow,#plant-cell:hover .shadow,  #about-us:hover .shadow{
+	opacity: 1;
+	transition: 0.4s;
 }
-.text-part>p{
-	font-size: 1rem;
-	margin: 1vh 0;
-	line-height: 1.4;
+.shadow{
+	background-color: #00000061;
+	position: absolute;
+	top:0;
+	opacity: 0;
+	transition: 0.4s;
+}
+a{
+	text-decoration: none;
+	color: white;
+	width: 80%;
+	height: auto;
 }
