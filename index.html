@@ -36,7 +36,7 @@
 		<h1> EUKARYOTES </h1>
 		<h2> SR16 SAN JUAN, SR21 BULATAO, SR26 MORACA </h2>
 
-		<a href="animal-cell.html">
+		<a href="animal-cell.html" class="card">
 			<div id="animal-cell">
 				<div class="img-container">
 					<img src="svg/cell.svg"/>
@@ -46,29 +46,126 @@
 			</div>
 		</a>
 
-		<a href="animal-cell.html">
+		<a href="animal-cell.html" class="card">
 			<div id="plant-cell">
 				<div class="img-container">
 					<img src="svg/plant-cell.svg"/>
 				</div>
 				<div class="shadow"></div>
 				<span>plant cell</span>
-
-				<div class="card">
-
-				</div>
 			</div>
 		</a>
 
-		<!--<a href="about-us.html">
-			<div id="about-us">
-				<div class="img-container">
-					<img src="svg/about-us-window.svg"/>
+		<div id="splash">
+			<h1> eukaryotes </h1>
+			<h2> SR16 SAN JUAN, SR21 BULATAO, SR26 MORACA </h2>
+			<a href="#menu"><img onclick="proceed()" src="svg/down-arrow.svg"/></a>
+		</div>
+
+		<main>
+
+		<div id="menu">
+			<span id="active">plant cell vs animal cell</span>
+			<span id="dead">meet the team</span>
+		</div>
+			<div id="content-wrapper">
+				<div class="container">
+					<div id="list">
+						<a onclick="openDesc('plasma-membrane')">plasma membrane</a>
+						<a onclick="openDesc('cell-wall')">cell wall</a>
+						<a onclick="openDesc('ribosome')">ribosome</a>
+						<a onclick="openDesc('nucleus')">nucleus</a>
+						<a onclick="openDesc('smooth-er')">smooth endoplasmic reticulum</a>
+						<a onclick="openDesc('vacuole')">vacuole</a>
+						<a onclick="openDesc('mitochondrion')">mitochondrion</a>
+						<a onclick="openDesc('golgi-apparatus')">golgi apparatus</a>
+						<a onclick="openDesc('lysosome')">lysosome</a>
+						<a onclick="openDesc('peroxisome')">peroxisome</a>
+						<a onclick="openDesc('chloroplast')">chloroplast</a>
+					</div>
 				</div>
-				<div class="shadow"></div>
-				<span>Meet the team</span>
+
+				<div class="container">
+					<div id="grid-container">
+						<div id="images-container">
+							<div id="animal-cell-img">
+								<div>
+									<img id="animal"src="svg/cell.svg"/>
+								</div>
+							</div>
+
+							<div id="plant-cell-img">
+								<div>
+									<img id="plant"src="svg/plant-cell.svg"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="container">
+							<div id="plasma-membrane" class="hide-text descrip">
+								<h2> plasma membrane </h2>
+                       		 	<p> Acts as a <b>barrier</b> between the organelles and the outside environment. It also facilitates the passage of oxygen, nutrients and water to service the cell, as well as communication and signalling between other cells. </p>
+							</div>
+							
+							<div id="cell-wall" class="hide-text descrip">
+								<h2>cell wall</h2>
+                        		<p> Like the plasma membrane, it’s the framework of the cell but it provides a <b>thicker barrier</b> for the cell which prevents overexpansion . This thickness also regulates diffusion and prevents water loss in the cell.</p>
+							</div>
+
+							<div id="ribosome" class="hide-text descrip">
+								<h2> ribosome </h2>
+                        		<p> The organelle in charge of <b>protein formation</b> needed for different cell processes. Its location determines its function, although both are structurally identical and interchangeable. Most ribosomes are suspended in the cytosol, known as <b>free ribosomes</b>, while some are attached to the Rough Endoplasmic Reticulum, now classified as a <b>bound ribosome</b>. These bound ribosomes are proteins destined for membrane inclusion, packaging with certain organelles, and export. </p>
+							</div>
+
+							<div id="nucleus" class="hide-text descrip">
+								<h2> nucleus </h2>
+                       			<p>This is the region where the majority of the <b>cell’s genetic material</b> is contained. Usually known as the ‘brain’ of the cell. In eukaryotes, this is called the nucleus which contains a nuclear envelope, nuclear lamina and chromatin which are all designed for protection of and/or transportation of signals from and to the nucleus. </p>
+							</div>
+
+							<div id="smooth-er" class="hide-text descrip">
+								<h2> smooth endoplasmic 	reticulum </h2>
+                        		<p>Functions in <b>metabolic processes</b> like lipid synthesis, carbohydrate metabolism, and drug and poison detoxification. </p>
+							</div>
+
+							<div id="rough-er" class="hide-text descrip">
+								<h2> rough endoplasmic reticulum </h2>
+                        		<p>Functions like the Smooth ER but has additional duties like the formation of secretory proteins that depart from the organelle and become transport vesicles for the cell. This is also the <b>main site of protein synthesis</b> due to the abundance of ribosomes. It also stores secretory proteins different from the proteins produced by free ribosomes. </p>
+                   			</div>
+
+							<div id="vacuole" class="hide-text descrip">
+								<h2>vacuole</h2>
+                        		<p> The main organelle that regularly performs homeostasis. In prokaryotes and animals, they have <b>food vacuoles</b> where they store food from phagocytosis before being digested by the lysosome. </p>
+							</div>
+
+							<div id="mitochondrion" class="hide-text descrip">
+								<h2>mitochondrion</h2>
+                  				<p> The site of <b>cellular respiration that produces ATP</b>, the energy that the cell can use. Popularly known as the ‘powerhouse of the cell’ </p>
+							</div>
+
+							<div id="golgi-apparatus" class="hide-text descrip">
+								<h2>golgi apparatus</h2>
+                        		<p> Acts as the “factory” of the cell, which <b>manufactures, stores, sorts and transports</b> the vesicles made by the Rough ER. It can also produce certain macromolecules and organelles by itself, like lysosomes. </p>
+							</div>
+
+							<div id="lysosome" class="hide-text descrip">
+								<h2>lysosome</h2>
+                        		<p> Performs <b>intracellular digestion</b>, most frequently phagocytosis. It also digests macromolecules through hydrolysis. As well as regularly performs autophagy, the recycling of one’s own materials </p>
+							</div>
+
+							<div id="peroxisome" class="hide-text descrip">
+								<h2>peroxisome</h2>
+                        		<p> The oxidative organelle that <b>oxidizes fatty and amino acids in the cell </b>. It also produces hydrogen peroxide (where the name of the cell originates) as well as a catalase that counteracts its toxicity. It also produces a phospholipid precursor that starts the synthesis of lipids and carbohydrates, which then goes to the SER for further synthesis. Lastly, like the lysosome, the peroxisome also regularly performs autophagy.  </p>
+							</div>
+
+							<div id="chloroplast" class="hide-text descrip">
+								<h2>chloroplast</h2>
+                        		<p> The <b>site of photosynthesis</b> where plants get their food, and works hand in hand with the mitochondria to efficiently extract energy from sunlight, water and oxygen (ingredients of photosynthesis).</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</a>-->
+		</main>
 
 		<script type="text/javascript">
 			function exitMessage()
@@ -77,8 +174,22 @@
 				document.getElementById('message-container').style.transition = "0.4s";
 				document.getElementById('message-container').style.top = "-100%";				
 			}
+			function proceed()
+			{
+				var aBody = document.getElementsByTagName("BODY")[0]; 
+				aBody.style.overflow="visible";
+			}
+			function openDesc(part)
+			{
 
+				var aDiv=document.getElementsByClassName('show-text');
+				for(i=0;i<aDiv.length;i++){
+					aDiv[i].className="hide-text";
+				}
+				var aDiv=document.getElementById(part);
+				aDiv.className="show-text descrip";
 
+			}
 		</script>
 	</body>
 </html>
