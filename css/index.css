@@ -112,9 +112,11 @@ body>h2{
 		display: block;
 		margin:0;
 		width: auto;
+		color: #292929ff;
 	}
 	main{
 		display: block;
+		position: relative;
 	}
 	body>h1,body>h2,.card{
 		display: none;
@@ -155,6 +157,7 @@ body>h2{
 		flex-direction: row;
 		align-items: flex-end;
 		justify-content: center;
+		color: #292929ff;
 		box-shadow: 0 0.05rem 0.4rem 0.1rem rgba(105,105,105,0.45);
 	}
 	#menu>span{
@@ -170,6 +173,10 @@ body>h2{
 		cursor: pointer;
 		transition: 0.3s;
 		padding:0 0.2rem;
+	}
+	#menu>span>a{
+		text-decoration: none;
+		color: #292929ff;
 	}
 	#active{
 		border-bottom: 0.25rem solid #2ba8a8ff;
@@ -195,6 +202,9 @@ body>h2{
 		flex-direction: column;
 		justify-content: center;
 	}
+	#list-container{
+		border-right: 0.1rem solid rgba(105,105,105,0.10);
+	}
 	#list{
 		margin-left: 10%;
 		display: flex;
@@ -214,7 +224,7 @@ body>h2{
 	#grid-container{
 		height: 80%;
 		display: grid;
-		grid-template-rows: 70% 20%;
+		grid-template-rows: 70% 30%;
 		grid-row-gap:5%;
 		margin-right: 5%;
 	}
@@ -225,6 +235,10 @@ body>h2{
 		grid-template-columns: 45% 45%;
 		grid-column-gap: 10%;
 	}
+	#images-container>div>div>span{
+		position: absolute;
+		bottom: 0;
+	}
 	#animal-cell-img,#plant-cell-img{
 		overflow: hidden;
 	}
@@ -232,12 +246,14 @@ body>h2{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 		width: 100%;
 		height: 100%;
 		transition: 0.4s;
+		position: relative;
 	}
 	#animal,#plant{
-		width:95%;
+		width:67%;
 	}
 	.hide-text{
 		display: none;
@@ -245,9 +261,68 @@ body>h2{
 	.show-text{
 		display: block;
 	}
-	.descrip{
-		width: 70%;
+	#text-container{
+		justify-content: flex-start;
+		align-items: baseline;
 	}
-
-
+	#text-container div h2{
+		margin:0;
+		font-size: 1.5rem;
+		font-style: italic;
+		letter-spacing: 0.1rem;
+	}
+	#text-container div p{
+		margin: 0.3rem 0 0 0;
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+	.descrip{
+		width: 100%;
+	}
+	#instructions{
+		position: absolute;
+		bottom: 1rem;
+		right: 0.5rem;
+		width: 25rem;
+		height: 7rem;
+		background-color: #2ba8a8ff;
+		color: white;
+		border-radius: 0.7rem;
+		display: grid;
+		grid-template-columns: 80% 20%
+	}
+	#help{
+		margin-left:1rem;
+		display: flex;
+		justify-content:flex-start;
+		align-items:flex-end;
+		margin-bottom: 0.5rem;
+	}
+ 	#help p{
+ 		margin:0;
+ 		font-size: 1rem;
+ 	}
+ 	#help p:first-child{
+ 		font-size: 1.3rem;
+ 		margin-bottom: 0.3rem;
+ 	}
+ 	#help div{
+ 		height: auto;
+ 	}
+ 	#exit{
+ 		display: flex;
+		justify-content:flex-end;
+		margin-right: 1rem;
+		margin-top: 1rem;
+ 	}
+ 	#exit img{
+ 		width: 1.3rem;
+ 	}
+ 	#exit div{
+ 		height: auto;
+ 		width: 1.3rem;
+ 	}
+ 	#exit div:hover{
+ 		cursor: pointer;
+ 	}
 }

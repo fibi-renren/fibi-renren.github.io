@@ -64,24 +64,39 @@
 
 		<main>
 
+		<div id="instructions">
+			<div id="help">
+				<div>
+					<p id="header"> INSTRUCTIONS </p>
+					<p> Hello!! Over there at the far left, we've got ourselves a list of cell organelles (not complete). Just click any of them. </p> 
+				</div>
+			</div>
+			<div id="exit">
+				<div> <img onclick="exitAlert()" src="svg/exit.svg"/> </div>
+			</div>
+		</div>
+
 		<div id="menu">
 			<span id="active">plant cell vs animal cell</span>
-			<span id="dead">meet the team</span>
+			<span id="dead"><a href="about-us.html">meet the team</a></span>
 		</div>
+		
 			<div id="content-wrapper">
-				<div class="container">
+				<div id="list-container" class="container">
 					<div id="list">
 						<a onclick="openDesc('plasma-membrane')">plasma membrane</a>
 						<a onclick="openDesc('cell-wall')">cell wall</a>
 						<a onclick="openDesc('ribosome')">ribosome</a>
 						<a onclick="openDesc('nucleus')">nucleus</a>
 						<a onclick="openDesc('smooth-er')">smooth endoplasmic reticulum</a>
+						<a onclick="openDesc('rough-er')">rough endoplasmic reticulum</a>
 						<a onclick="openDesc('vacuole')">vacuole</a>
 						<a onclick="openDesc('mitochondrion')">mitochondrion</a>
 						<a onclick="openDesc('golgi-apparatus')">golgi apparatus</a>
 						<a onclick="openDesc('lysosome')">lysosome</a>
 						<a onclick="openDesc('peroxisome')">peroxisome</a>
 						<a onclick="openDesc('chloroplast')">chloroplast</a>
+						<a onclick="instructions()">INSTRUCTIONS</a>
 					</div>
 				</div>
 
@@ -91,17 +106,19 @@
 							<div id="animal-cell-img">
 								<div>
 									<img id="animal"src="svg/cell.svg"/>
+									<span> animal cell </span>
 								</div>
 							</div>
 
 							<div id="plant-cell-img">
 								<div>
 									<img id="plant"src="svg/plant-cell.svg"/>
+									<span> plant cell </span>
 								</div>
 							</div>
 						</div>
 
-						<div class="container">
+						<div id="text-container" class="container">
 							<div id="plasma-membrane" class="hide-text descrip">
 								<h2> plasma membrane </h2>
                        		 	<p> Acts as a <b>barrier</b> between the organelles and the outside environment. It also facilitates the passage of oxygen, nutrients and water to service the cell, as well as communication and signalling between other cells. </p>
@@ -189,6 +206,14 @@
 				var aDiv=document.getElementById(part);
 				aDiv.className="show-text descrip";
 
+			}
+			function exitAlert(){
+				var aMessage=document.getElementById('instructions');
+				aMessage.style.display="none";
+			}
+			function instructions(){
+				var aMessage=document.getElementById('instructions');
+				aMessage.style.display="grid";
 			}
 		</script>
 	</body>

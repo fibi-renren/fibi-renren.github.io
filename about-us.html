@@ -22,6 +22,8 @@
 		-->
 		<link rel="stylesheet" type="text/css" href="css/about-us.css" />
 
+		<script src="https://kit.fontawesome.com/bb881ac9f5.js" crossorigin="anonymous"></script>
+
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
 	</head>
 	<body>
@@ -48,6 +50,52 @@
 						<p> "hi hAHAHAHAH shoutout sa Sr2023. labyu guys. hulaan niyo na lang kung sino sino kami sa pic "</p>
 					</div>
 				</div>
+			</div>
+
+			<div id="desktop-vr">
+				<div id="menu-desktop">
+					<span id="dead"><a href="index.html">plant cell vs animal cell</a></span>
+					<span id="active"><a href="about-us.html">meet the team</a></span>
+				</div>
+
+				<div id="wrapper">
+					<div id="flex">
+						<img src="svg/about-us.svg"/>
+					</div>
+					<div id="grid">
+						<div id="up-grid"> 
+							<i onclick="change(-1)" id="left" class="fas fa-caret-left"></i>
+								<img class="imahe show-text" src="svg/about-us/ella.png"/> 
+								<img class="imahe hide-text" src="svg/about-us/carl.png"/> 
+								<img class="imahe hide-text" src="svg/about-us/fibi.png"/> 
+							<i onclick="change(1)" id="right" class="fas fa-caret-right fa-1x"></i>
+						</div>
+						<div id="messages-desktop">
+							<div class="choose-ur-fighter show-text">
+								<h1> ELLA </h1>
+								<h2> researcher, illustrator</h2>
+								<p>"hello!! i'm ella and i'm the one that pushed the other two to liking/loving biology! (heh) aside from loving bio, i also draw and write from time to time"</p>
+							</div>
+							<div class="choose-ur-fighter hide-text">
+								<h1> CARL </h1>
+								<h2> researcher </h2>
+								<p> "hey !! im carl and im rlly bodo sa comsci so heh :> pero i support the bio agenda <span id="special">😌</span>, aside from that i do calligraphy and am a math enthusiast hihi"</p>
+							</div>
+							<div class="choose-ur-fighter hide-text">
+								<h1> PHOEBE </h1>
+								<h2> illustrator, code-r(?) </h2>
+								<p> "hi hAHAHAHAH hanggang ngayon wala pa rin akong maisip kung ano ilalagay ko dito so shoutout na lang sa Sr2023 yIEE LABYU GUYS"</p>
+							</div>
+
+							<div id="soc-med">
+								<i class="fab fa-facebook fa-1x"></i>
+								<i class="fab fa-twitter fa-1x"></i>
+								<i class="fab fa-pinterest fa-1x"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 			
 			<footer>
@@ -119,6 +167,47 @@
 					aContainer.style.transition= "0.3s";
 				}
 			}
+	
+			function change(action)
+			{
+				var currentIndex=0;
+
+				var anImgPlural=document.getElementsByClassName('imahe');
+				console.log(anImgPlural);
+				
+				for(i=0;i<anImgPlural.length;i++){
+					if(anImgPlural[i].className=="imahe show-text")
+					{
+						anImgPlural[i].className="imahe hide-text";
+						currentIndex=i;
+					}
+				}
+				var aTextPlural=document.getElementsByClassName('choose-ur-fighter');
+				
+				for(i=0;i<aTextPlural.length;i++){
+					if(aTextPlural[i].className=="choose-ur-fighter show-text")
+					{
+						aTextPlural[i].className="choose-ur-fighter hide-text";
+					}
+				}
+				newIndex = currentIndex+action;
+				if(newIndex==3){
+					newIndex=0;
+				}
+				else if(newIndex<0){
+					newIndex=2;
+				}
+				else{
+					newIndex = currentIndex+action;;
+				}
+				console.log(newIndex);
+				anImgPlural[newIndex].className="imahe show-text";
+				aTextPlural[newIndex].className="choose-ur-fighter show-text";
+
+			
+
+			}
+
 		</script>
 	</body>
 </html>
