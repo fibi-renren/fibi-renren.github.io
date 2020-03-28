@@ -26,7 +26,7 @@ html{
 	z-index: 10000;
 	background-color: white;
 	padding: 1rem 1rem;
-	font-size: 0.85rem;
+	font-size: 1rem;
 	transition: 0.4s;
 }
 body{
@@ -241,6 +241,7 @@ body>h2{
 	}
 	#animal-cell-img,#plant-cell-img{
 		overflow: hidden;
+		position: relative;
 	}
 	#animal-cell-img div,#plant-cell-img div{
 		display: flex;
@@ -251,6 +252,16 @@ body>h2{
 		height: 100%;
 		transition: 0.4s;
 		position: relative;
+		transition: 0.4s;
+	}
+	#animal-cell-img>span,#plant-cell-img>span{
+		letter-spacing: 0.3rem;
+		position: absolute;
+		bottom: 1rem;
+		left: 1rem;
+		z-index: 9999;
+		font-size: 1.5rem;
+		color: #2ba8a8ff;
 	}
 	#animal,#plant{
 		width:67%;
@@ -263,7 +274,7 @@ body>h2{
 	}
 	#text-container{
 		justify-content: flex-start;
-		align-items: baseline;
+		align-items: center;
 	}
 	#text-container div h2{
 		margin:0;
@@ -277,7 +288,10 @@ body>h2{
 		line-height: 1.5;
 	}
 	.descrip{
-		width: 100%;
+		width: 80%;
+	}
+	.descrip>p{
+		text-indent: 2rem;
 	}
 	#instructions{
 		position: absolute;
@@ -325,4 +339,112 @@ body>h2{
  	#exit div:hover{
  		cursor: pointer;
  	}
-}
+ 	.plasma-membrane_animal{
+ 		transform: scale(1);
+ 	}
+ 	.plasma-membrane_plant{
+ 		transform: scale(4);
+    	left: -70%;
+ 	}
+ 	.cell-wall_animal{
+ 		transform: scale(1);
+ 	}
+ 	.cell-wall_plant{
+ 		transform: scale(1);
+ 	}
+ 	.ribosome_animal{
+ 		transform: scale(5);
+   		left: -60%;
+    	bottom: 80%;
+ 	}
+ 	.ribosome_plant{
+ 		transform: scale(4);
+    	top: 70%;
+   		left: -40%;
+ 	}
+ 	.nucleus_animal{
+ 		transform: scale(4);
+ 	}
+ 	.nucleus_plant{
+ 		transform: scale(4);
+    	left: -40%;
+    	bottom: 15%;
+ 	}
+ 	.smooth-er_animal{
+ 	    transform: scale(4);
+    	left: -80%;
+    	top: 30%;
+ 	}
+ 	.smooth-er_plant{
+ 		transform: scale(5);
+    	left: -55%;
+    	top: 30%;
+ 	}
+ 	.rough-er_animal{
+ 		transform: scale(3.5);
+    	bottom: 60%;
+    	left: -50%;
+ 	}
+	.rough-er_plant{
+ 		transform: scale(3.9);
+    	top: 50%;
+    	left: -50%;
+ 	}
+	.vacuole_animal{
+ 		transform: scale(5);
+    	top: 90%;
+    	left: -50%;
+ 	}
+	.vacuole_plant{
+ 		transform: scale(3.4);
+   		top: 25%;
+    	left: 10%;
+ 	}
+	.mitochondrion_animal{
+ 		transform: scale(3);
+    	top: 60%;
+    	left: 30%;
+ 	}
+	.mitochondrion_plant{
+ 		transform: scale(3.5);
+    	bottom: 40%;
+    	left: 50%;
+ 	}
+	.golgi-apparatus_animal{
+	    transform: scale(3);
+    	bottom: 50%;
+    	left: 40%;
+ 	}
+	.golgi-apparatus_plant{
+ 		transform: scale(4);
+    	bottom: 50%;
+ 	}
+	.lysosome_animal{
+ 		transform: scale(5);
+	    bottom: 40%;
+	    left: 120%;
+ 	}
+	.lysosome_plant{
+ 		transform: scale(4.5);
+	    top: 120%;
+	    left: 30%;
+ 	}
+	.peroxisome_animal{
+ 		transform: scale(4);
+    	left: 75%;
+ 	}
+	.peroxisome_plant{
+	    transform: scale(4.5);
+	    left: 100%;
+	    top: -20%;
+ 	}
+	.chloroplast_plant{
+ 		transform: scale(3.7);
+    	left: 60%;
+    	top: 20%;
+ 	}
+	.chloroplast_animal{
+ 		transform: scale(1);
+ 	}
+
+ }

@@ -197,9 +197,11 @@ body{
  	font-weight: 700;
  	font-style: italic;
  	margin:0;
+ 	color: #2ba8a8ff;
 }
 .text-part>p{
 	font-size: 1rem;
 	margin: 1vh 0;
 	line-height: 1.4;
+	text-indent: 1rem;
 }

@@ -117,14 +117,14 @@ body{
 footer{
 	color: #292929ff;
 	font-size: 0.95rem;
-	margin: 3vh 3vw 3vh 3vw;
+	margin: 1rem 1.5rem;
 }
 footer a{
 	text-decoration: none;
 	color: #2ba8a8ff;
 }
-footer>div{
-	margin: 1vh 0 1vh 0;
+footer>div>div{
+	margin: 1.5rem 0;
 }
 #desktop-screen{
 	display: none;
@@ -254,7 +254,7 @@ footer>div{
 		align-items: center;
 		position: relative;
 	}
-	#messages-desktop>div>h1, footer>span{
+	#messages-desktop>div>h1, footer>div>span{
 		letter-spacing: 0.3rem;
 		font-size: 1.5rem;
 		color: #2ba8a8ff;
@@ -285,12 +285,11 @@ footer>div{
 		height: 90vh;
 		color: #292929ff;
 	}
-	footer>div{
-		margin: 1.3rem 0;
-	}
 	footer{
+		font-size: 0.95rem;
 		display: grid;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 40% 40%;
+		margin: 1rem 5rem;
 	}
 
 }

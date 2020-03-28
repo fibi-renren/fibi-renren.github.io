@@ -46,7 +46,7 @@
 			</div>
 		</a>
 
-		<a href="animal-cell.html" class="card">
+		<a href="plant-cell.html" class="card">
 			<div id="plant-cell">
 				<div class="img-container">
 					<img src="svg/plant-cell.svg"/>
@@ -104,28 +104,30 @@
 					<div id="grid-container">
 						<div id="images-container">
 							<div id="animal-cell-img">
-								<div>
+								<div id="anImg-animal">
 									<img id="animal"src="svg/cell.svg"/>
-									<span> animal cell </span>
 								</div>
+								<span class="label">animal cell</span>
 							</div>
 
 							<div id="plant-cell-img">
-								<div>
+								<div id="anImg-plant">
 									<img id="plant"src="svg/plant-cell.svg"/>
-									<span> plant cell </span>
 								</div>
+								<span class="label"> plant cell </span>
 							</div>
 						</div>
 
 						<div id="text-container" class="container">
 							<div id="plasma-membrane" class="hide-text descrip">
 								<h2> plasma membrane </h2>
+								<p><i>The plasma membrane of the plant cell is depicted as a dark shade of green here, lining the cell wall.</i></p>
                        		 	<p> Acts as a <b>barrier</b> between the organelles and the outside environment. It also facilitates the passage of oxygen, nutrients and water to service the cell, as well as communication and signalling between other cells. </p>
 							</div>
 							
 							<div id="cell-wall" class="hide-text descrip">
 								<h2>cell wall</h2>
+								<p> <i>Animal cells don't have cell walls.</i></p>
                         		<p> Like the plasma membrane, it’s the framework of the cell but it provides a <b>thicker barrier</b> for the cell which prevents overexpansion . This thickness also regulates diffusion and prevents water loss in the cell.</p>
 							</div>
 
@@ -176,6 +178,7 @@
 
 							<div id="chloroplast" class="hide-text descrip">
 								<h2>chloroplast</h2>
+								<p><i>Animal cells don't have chloroplast.</i></p>
                         		<p> The <b>site of photosynthesis</b> where plants get their food, and works hand in hand with the mitochondria to efficiently extract energy from sunlight, water and oxygen (ingredients of photosynthesis).</p>
 							</div>
 						</div>
@@ -205,6 +208,27 @@
 				}
 				var aDiv=document.getElementById(part);
 				aDiv.className="show-text descrip";
+
+				var aCell=document.getElementById('anImg-animal');
+				aCell.className=part+"_animal";
+
+				var anotherCell=document.getElementById('anImg-plant');
+				anotherCell.className=part+"_plant";
+
+				var aText=document.getElementsByClassName('label');
+				var i=0;
+				if (part=="chloroplast" || part=="golgi-apparatus" || part=="plasma-membrane"){
+					aText[1].style.color="white";
+					aText[0].style.color="#2ba8a8ff";
+				}
+				else if (part=="cell-wall"){
+					for (i=0;i<aText.length;i++){
+					aText[i].style.color="#2ba8a8ff";}
+				}
+				else{
+				for (i=0;i<aText.length;i++){
+					aText[i].style.color="white";}
+				}
 
 			}
 			function exitAlert(){
