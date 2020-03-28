@@ -52,12 +52,14 @@
 				</div>
 			</div>
 
-			<div id="desktop-vr">
-				<div id="menu-desktop">
+			<div id="desktop-screen">
+			<div id="menu-desktop">
 					<span id="dead"><a href="index.html">plant cell vs animal cell</a></span>
 					<span id="active"><a href="about-us.html">meet the team</a></span>
-				</div>
+			</div>
 
+
+			<div id="desktop-vr">
 				<div id="wrapper">
 					<div id="flex">
 						<img src="svg/about-us.svg"/>
@@ -95,22 +97,39 @@
 						</div>
 					</div>
 				</div>
-
+			</div>
 			</div>
 			
 			<footer>
-				<b>RESOURCES USED: </b>
 				<div>
-					Animal cell by Phoebe using <a href="https://www.britannica.com/science/peroxisome"> this model</a> as reference.
+					<span><b>CREDITS: </b></span>
+					<div>
+						Animal cell by Phoebe, modelled after <a href="https://www.britannica.com/science/peroxisome"> this</a>.
+					</div>
+					<div>
+						Plant cell by Ella, modelled after <a href="https://www.britannica.com/science/peroxisome"> this</a>.
+					</div>
+					<div>
+						Washi tape used: 
+						<ul>
+							<li>blue zigzag pattern from <a href = "https://picsart.com/i/sticker-washitape-washi-tape-patternfreetoedit-239552629067212" target=”_blank” > PicsArt</a>. </li>
+							<li>pink striped pattern from <a href = "https://www.jing.fm/iclipt/u2q8q8i1a9o0u2i1/" target=”_blank” > here</a>. </li>
+							<li>grid pattern from <a href = "https://picsart.com/en_ph/i/sticker-grid-tape-aesthetic-sqaure-scrapbook-washitape-art-307417824028211" target=”_blank” > PicsArt</a>. </li>
+							<li>orange grid pattern by <a href = "https://www.pixelscrapper.com/janet-scott/designs/orange-grid-washi-tape-asset-embellishment-ledger-white" target=”_blank” > Janet Scott</a>. </li>
+						</ul>
+					</div>
 				</div>
 				<div>
-					Plant cell by Ella using <a href="https://www.britannica.com/science/peroxisome"> this model</a> as reference.
-				</div>
-				<div>
-					Washi tape from <a href = "https://picsart.com/i/sticker-washitape-washi-tape-patternfreetoedit-239552629067212"> here</a>.
-				</div>
-				<div> 
-					Content mostly from Campbell, N. A., Reece, J. B., Mitchell, L. G.(1946).The Cell. <i>Biology</i> (pp.100-124).
+					<div>
+						Background photos used: 
+						<ul>
+							<li>mobile version: paperbag texture from <a href = "https://www.jonathan-menet.fr/blog/2015/03/11/ressources-35-textures-gratuites-de-sacs-en-papier/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed:+JohnsGraphisme+(Le+blog+John+s+Graphisme)" target=”_blank” > here</a>. </li>
+							<li>desktop version: grid paper texture <a href = "https://www.deviantart.com/rawrdis/art/050-111056664?q=gallery%3Arawrdis%2F8549305&qo=49" target=”_blank” > by Rawrdis on DeviantArt</a>. </li>
+						</ul>
+					</div>
+					<div> 
+						Content mostly from Campbell, N. A., Reece, J. B., Mitchell, L. G.(1946).The Cell. <i>Biology</i> (pp.100-124).
+					</div>
 				</div>
 			</footer>
 		</main>
@@ -173,7 +192,6 @@
 				var currentIndex=0;
 
 				var anImgPlural=document.getElementsByClassName('imahe');
-				console.log(anImgPlural);
 				
 				for(i=0;i<anImgPlural.length;i++){
 					if(anImgPlural[i].className=="imahe show-text")
@@ -200,12 +218,8 @@
 				else{
 					newIndex = currentIndex+action;;
 				}
-				console.log(newIndex);
 				anImgPlural[newIndex].className="imahe show-text";
 				aTextPlural[newIndex].className="choose-ur-fighter show-text";
-
-			
-
 			}
 
 		</script>

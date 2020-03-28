@@ -126,10 +126,13 @@ footer a{
 footer>div{
 	margin: 1vh 0 1vh 0;
 }
-#desktop-vr{
+#desktop-screen{
 	display: none;
 }
 @media screen and (min-width: 1000px){
+	#desktop-screen{
+		display: block;
+	}
 	#desktop-vr{
 		display: block;
 		background: url('../svg/misc/bg.svg');
@@ -140,9 +143,6 @@ footer>div{
 		background-position: center;
 	}
 	#background,#menu{
-		display: none;
-	}
-	footer{
 		display: none;
 	}
 	#menu-desktop{
@@ -157,6 +157,7 @@ footer>div{
 		justify-content: center;
 		color: #292929ff;
 		box-shadow: 0 0.05rem 0.4rem 0.1rem rgba(105,105,105,0.45);
+		z-index: 99999;
 	}
 	#menu-desktop>span{
 		display: inline-block;
@@ -253,7 +254,7 @@ footer>div{
 		align-items: center;
 		position: relative;
 	}
-	#messages-desktop>div>h1{
+	#messages-desktop>div>h1, footer>span{
 		letter-spacing: 0.3rem;
 		font-size: 1.5rem;
 		color: #2ba8a8ff;
@@ -279,6 +280,17 @@ footer>div{
 	.show-text{
 		display: flex;
 	}
-	
+	#dont-sue-us-pls{
+		width: 100%;
+		height: 90vh;
+		color: #292929ff;
+	}
+	footer>div{
+		margin: 1.3rem 0;
+	}
+	footer{
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
 
 }
