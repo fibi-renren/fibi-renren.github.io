@@ -175,8 +175,16 @@ body>h2{
 		padding:0 0.2rem;
 	}
 	#menu>span>a{
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		letter-spacing: 0.05rem;
 		text-decoration: none;
 		color: #292929ff;
+		width: 100%;
+		height: 100%;
 	}
 	#active{
 		border-bottom: 0.25rem solid #2ba8a8ff;

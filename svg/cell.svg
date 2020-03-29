@@ -87,16 +87,6 @@
          x="705.391"
          y="-282.847" />
     </clipPath>
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter1031">
-      <feBlend
-         inkscape:collect="always"
-         mode="multiply"
-         in2="BackgroundImage"
-         id="feBlend1033" />
-    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -105,11 +95,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.16"
-     inkscape:cx="324.262"
-     inkscape:cy="445.743"
+     inkscape:zoom="0.320625"
+     inkscape:cx="597.66"
+     inkscape:cy="431.587"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -144,10 +134,10 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="animal cell"
-     style="display:inline;filter:url(#filter1031)"
+     style="display:inline"
      transform="translate(84.9126,81.2525)">
     <path
-       style="display:inline;opacity:0.99;fill:#4eadaf;fill-opacity:1;stroke:none;stroke-width:0.222651;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="display:inline;opacity:0.99;fill:#2ba8a8;fill-opacity:1;stroke:none;stroke-width:0.222651;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 207.401,59.0351 c 0,40.4151 0.405,82.6949 -25.983,111.6189 -26.387,28.924 -80.357,40.428 -121.225,40.428 -81.7365,0 -144.8397,-54.957 -144.8397,-135.7879 0,-80.83034 55.9994,-152.047 136.9465,-156.112 40.8193,-2.049 84.9712,17.1949 111.7532,36.3637 15.245,10.9111 26.082,26.6796 33.108,44.772265 7.025,18.092735 10.24,38.509435 10.24,58.717035 z"
        id="path836"
        inkscape:connector-curvature="0"

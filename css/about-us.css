@@ -124,7 +124,7 @@ footer a{
 	color: #2ba8a8ff;
 }
 footer>div>div{
-	margin: 1.5rem 0;
+	margin: 0.5rem 0;
 }
 #desktop-screen{
 	display: none;
@@ -144,6 +144,9 @@ footer>div>div{
 	}
 	#background,#menu{
 		display: none;
+	}
+	footer>div>div{
+	margin: 1.5rem 0;
 	}
 	#menu-desktop{
 		width: 100%;
@@ -176,6 +179,12 @@ footer>div>div{
 	#menu-desktop>span>a{
 		text-decoration: none;
 		color: #292929ff;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		letter-spacing: 0.05rem;
 	}
 	#active{
 		border-bottom: 0.25rem solid #2ba8a8ff;
