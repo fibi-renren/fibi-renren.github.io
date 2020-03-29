@@ -88,7 +88,7 @@ body{
 #box, #img-container{
 	width: 100%;
 	height: 100vh;
-	background-color: #000000ba;
+	background-color: #000000e0;
 	z-index: 999;
 	position: absolute;
 	top:0;
@@ -98,14 +98,40 @@ body{
 	background-color: transparent;
 }
 #img-container_img{
-	width: 40%;
+	width: 80%;
+	animation-name: spoopyEntrance;
+	animation-duration: 0.3s;
+}
+@keyframes spoopyEntrance{
+	0% {transform: scale(0)};
+	100% {transform: scale(1);}
+}
+#img-container>div{
+	width: 30%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#img-container>div>p{
+	text-align: center;
+	color: white;
+	animation-name: sloosh;
+	animation-duration: 0.3s;
+	position: relative;
+	font-style: italic;
+}
+@keyframes sloosh{
+	0% {top: -8rem;}
+	100%{top: 0;}
 }
 .hide{
 	display: none;
 }
-.show{
+.show, .show-text{
 	display: block;
 }
-.show_flex{
-	display: flex;
+#rate-box{
+	background-color: green;
 }

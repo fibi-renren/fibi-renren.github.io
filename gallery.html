@@ -21,30 +21,37 @@
 		<main>
 			<div id="gallery-container">
 				<div id="gallery-container_grid">
-					<div onclick="showImg('1')"><img src="svg/gallery/1.png"/></div>
-					<div><img onclick="showImg('2')" src="svg/gallery/2.png"/></div>
-					<div><img onclick="showImg('3')" src="svg/gallery/3.png"/></div>
-					<div><img onclick="showImg('4')" src="svg/gallery/4.png"/></div>
-					<div><img onclick="showImg('5')" src="svg/gallery/5.png"/></div>
-					<div><img onclick="showImg('6')" src="svg/gallery/6.png"/></div>
-					<div><img onclick="showImg('7')" src="svg/gallery/7.png"/></div>
-					<div><img onclick="showImg('8')" src="svg/gallery/8.png"/></div>
+					<div><img onclick="showImg('one')" src="svg/gallery/one.png"/></div>
+					<div><img onclick="showImg(2)" src="svg/gallery/2.png"/></div>
+					<div><img onclick="showImg(3)" src="svg/gallery/3.png"/></div>
+					<div><img onclick="showImg(4)" src="svg/gallery/4.png"/></div>
+					<div><img onclick="showImg(5)" src="svg/gallery/5.png"/></div>
+					<div><img onclick="showImg(6)" src="svg/gallery/6.png"/></div>
+					<div><img onclick="showImg(7)" src="svg/gallery/7.png"/></div>
+					<div><img onclick="showImg(8)" src="svg/gallery/8.png"/></div>
 				</div>
-
 			</div>
 
 		</main>
 		<div id="box" class="hide" > </div>
-		<div id="img-container">
-			<img id="img-container_img" src=""/>
-			<p id="1" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
-			<p id="2" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
-			<p id="3" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
-			<p id="4" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
-			<p id="5" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
-			<p id="6" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
-			<p id="7" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
-			<p id="8" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+		<div id="img-container" onclick="exitImg()"  style="display: none">
+			<div>
+				<img id="img-container_img" src=""/>
+				<p id="one" class="hide">Shown is a bunch of stained blood cells of a frog. The dark middle is the nucleus, while the white part is the cytoplasm. </p>
+				<p id="2" class="hide">Shown is a root lateral section of an Allium cepa. The darker spots around the tip are the meristematic cells. </p>
+				<p id="3" class="hide"> Shown is a stained cross-section of a frog small intestine. The inner, vein-like structure is where the villi is located, while surrounding it is the epithelial tissue. The outer covering is a smooth muscle tissue.</p>
+				<p id="4" class="hide">Shown is a cross-section of a kidney. The darker looking parts are the kidney tubules, while right beside these tubules are the cuboidal cells, indicated with a white-colored nucleus.</p>
+				<p id="5" class="hide"> Shown are colonies of the specimen Volvox. Each circle with more cells inside represents one colony.</p>
+				<p id="6" class="hide"> Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+				<p id="7" class="hide"> Shown is a root cross-section of a Ranunculus old root. Surrounding the clusters of cells is the dermal tissue; in the very center of this cross-section are the xylem and phloem cells.</p>
+				<p id="8" class="hide"> Shown is a cross-section of a bamboo stem. The bee-looking cells are composed of two parts: the phloem (the two “wings”), and the xylem (center).</p>
+			</div>
+		</div>
+
+		<div id="rate-box">
+			
+
+
 		</div>
 
 		<script type="text/javascript">
@@ -54,13 +61,27 @@
 				var anotherDiv=document.getElementById('img-container');
 
 				aDiv.className="show";
-				anotherDiv.className="show_flex";
+				anotherDiv.style.display="flex";
 
 				var anImg=document.getElementById('img-container_img');
 				anImg.src="svg/gallery/"+number+".png";
 
 				var aDescrip=document.getElementById(number);
-				aDescrip.className="show";
+				aDescrip.className="show-text";
+			}
+			function exitImg()
+			{
+				var aDiv=document.getElementById('box');
+				var anotherDiv=document.getElementById('img-container');
+
+				aDiv.className="hide";
+				anotherDiv.style.display="none";
+
+				var aDescrip=document.getElementsByClassName("show-text");
+				for (i=0;i<aDescrip.length;i++){
+					aDescrip[i].className="hide";
+				}
+
 			}
 
 
