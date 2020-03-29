@@ -189,7 +189,7 @@ footer>div>div{
 	#active{
 		border-bottom: 0.25rem solid #2ba8a8ff;
 	}
-	#dead{
+	.dead{
 		border-bottom: 0.25rem solid white;
 	}
 	#menu-desktop>span:hover{

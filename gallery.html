@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		
+		<title>Eukaryotes</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="css/gallery.css" />
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+	</head>
+	<body>
+		<div id="menu">
+			<span class="dead"><a href="index.html">plant cell vs animal cell</a></span>
+			<span id="active">gallery</span>
+			<span class="dead"><a href="about-us.html">meet the team</a></span>
+		</div>
+
+		<main>
+			<div id="gallery-container">
+				<div id="gallery-container_grid">
+					<div onclick="showImg('1')"><img src="svg/gallery/1.png"/></div>
+					<div><img onclick="showImg('2')" src="svg/gallery/2.png"/></div>
+					<div><img onclick="showImg('3')" src="svg/gallery/3.png"/></div>
+					<div><img onclick="showImg('4')" src="svg/gallery/4.png"/></div>
+					<div><img onclick="showImg('5')" src="svg/gallery/5.png"/></div>
+					<div><img onclick="showImg('6')" src="svg/gallery/6.png"/></div>
+					<div><img onclick="showImg('7')" src="svg/gallery/7.png"/></div>
+					<div><img onclick="showImg('8')" src="svg/gallery/8.png"/></div>
+				</div>
+
+			</div>
+
+		</main>
+		<div id="box" class="hide" > </div>
+		<div id="img-container">
+			<img id="img-container_img" src=""/>
+			<p id="1" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+			<p id="2" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+			<p id="3" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+			<p id="4" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+			<p id="5" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+			<p id="6" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+			<p id="7" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+			<p id="8" class="hide">  Shown is a cross-section of a stained Ixora leaf. The blue-colored cells are parenchyma cells, and a strand of red-colored cells is one of the veins. </p>
+		</div>
+
+		<script type="text/javascript">
+			function showImg(number)
+			{
+				var aDiv=document.getElementById('box');
+				var anotherDiv=document.getElementById('img-container');
+
+				aDiv.className="show";
+				anotherDiv.className="show_flex";
+
+				var anImg=document.getElementById('img-container_img');
+				anImg.src="svg/gallery/"+number+".png";
+
+				var aDescrip=document.getElementById(number);
+				aDescrip.className="show";
+			}
+
+
+
+		</script>
+	</body>
+</html>
