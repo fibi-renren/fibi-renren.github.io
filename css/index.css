@@ -144,6 +144,11 @@ body>h2{
 		font-size:1rem;
 		margin: 0 0 1rem 0;
 	}
+	#splash>h3{
+		font-size:1rem;
+		letter-spacing: 0.3rem;
+		margin:0;
+	}
 	#splash>a>img{
 		width: 3rem;
 	}
@@ -301,52 +306,65 @@ body>h2{
 	.descrip>p{
 		text-indent: 2rem;
 	}
-	#instructions{
-		position: absolute;
-		bottom: 1rem;
-		right: 0.5rem;
-		width: 25rem;
-		height: 7rem;
-		background-color: #2ba8a8ff;
-		color: white;
-		border-radius: 0.7rem;
-		display: grid;
-		grid-template-columns: 80% 20%
-	}
-	#help{
-		margin-left:1rem;
-		display: flex;
-		justify-content:flex-start;
-		align-items:flex-end;
-		margin-bottom: 0.5rem;
-	}
- 	#help p{
- 		margin:0;
- 		font-size: 1rem;
- 	}
- 	#help p:first-child{
- 		font-size: 1.3rem;
- 		margin-bottom: 0.3rem;
- 	}
- 	#help div{
- 		height: auto;
- 	}
- 	#exit{
- 		display: flex;
-		justify-content:flex-end;
-		margin-right: 1rem;
-		margin-top: 1rem;
- 	}
- 	#exit img{
- 		width: 1.3rem;
- 	}
- 	#exit div{
- 		height: auto;
- 		width: 1.3rem;
- 	}
- 	#exit div:hover{
- 		cursor: pointer;
- 	}
+}
+.alert-container {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 999;
+}
+.alert{
+	color: white;
+	font-size: 0.9rem;
+	font-family:  'Roboto', sans-serif;
+	width: 18rem;
+	margin: 1rem;
+	padding: 0.7rem;
+	opacity: 1;
+	transition: opacity 0.6s;
+}
+.alert>h1{
+	font-style: strong;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+}
+.para {
+	margin: 0;
+	padding: 0;
+}
+.success{
+	background-color: green;
+}
+.red, .error {
+	background-color: red;
+}
+.grey, .note {
+	background-color: grey;
+}
+.text{
+	margin-top: 0px;
+	padding-left: 20px;
+	margin: 5%;
+	font-color: black;
+	font-size: 18px;
+}
+
+.close-alert{
+	font-size: 22px;
+	margin-top: 5px;
+	margin-left: 276px;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	float: right;
+	line-height: 10px;
+	transition: 0.3s;
+}
+
+.hide-alert {
+	display: none;
+}
  	.plasma-membrane_animal{
  		transform: scale(1);
  	}

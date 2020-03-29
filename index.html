@@ -46,21 +46,16 @@
 
 		<div id="splash">
 			<h1> eukaryotes </h1>
-			<h2> SR16 SAN JUAN, SR21 BULATAO, SR26 MORACA </h2>
+			<h3 id="probset"> [extended version] </h3>
+			<h2> SR21 BULATAO, SR26 MORACA </h2>
 			<a href="#menu"><img onclick="proceed()" src="svg/down-arrow.svg"/></a>
 		</div>
 
 		<main>
 
 		<div id="instructions">
-			<div id="help">
-				<div>
-					<p id="header"> INSTRUCTIONS </p>
-					<p> Hello!! Over there at the far left, we've got ourselves a list of cell organelles (not complete). Just click any of them. </p> 
-				</div>
-			</div>
-			<div id="exit">
-				<div> <img onclick="exitAlert()" src="svg/exit.svg"/> </div>
+			<div class="alert-container" id="alert-container">
+				
 			</div>
 		</div>
 
@@ -84,7 +79,7 @@
 						<a onclick="openDesc('lysosome')">lysosome</a>
 						<a onclick="openDesc('peroxisome')">peroxisome</a>
 						<a onclick="openDesc('chloroplast')">chloroplast</a>
-						<a onclick="instructions()">INSTRUCTIONS</a>
+						<a onclick="createAlert('grey')">INSTRUCTIONS</a>
 					</div>
 				</div>
 
@@ -219,13 +214,82 @@
 				}
 
 			}
-			function exitAlert(){
-				var aMessage=document.getElementById('instructions');
-				aMessage.style.display="none";
+			var contDiv = document.getElementById('alert-container');
+			function createAlert(color){
+				var aParent = document.createElement('div');
+
+				if ((color == 'green' || color == 'red')){
+
+					if (color == 'green'){
+						aParent.className = "alert success";
+
+						var span = document.createElement('span');
+						span.className = "close-alert";
+						span.innerHTML = "&times;";
+						aParent.append(span);
+
+						var first = document.createElement('h1');
+						first.innerHTML = "SUCCESS!";
+						aParent.append(first);
+
+						var paragraph = document.createElement('p');
+						paragraph.className = "para";
+						paragraph.innerHTML = "You're being productive :D";
+						aParent.append(paragraph);
+
+					}
+					
+					else {
+					aParent.className = "alert error";
+
+					var span = document.createElement('span');
+					span.className = "close-alert";
+					span.innerHTML = "&times;";
+					aParent.append(span);
+
+					var first = document.createElement('h1');
+					first.innerHTML = "ERROR!";
+					aParent.append(first);
+
+					var paragraph = document.createElement('p');
+					paragraph.className = "para";
+					paragraph.innerHTML = "Do something productive >:(";
+					aParent.append(paragraph);
+
+					}
+				}
+				else{
+					aParent.className = "alert note";
+
+					var span = document.createElement('span');
+					span.className = "close-alert";
+					span.innerHTML = "&times;";
+					aParent.append(span);
+
+					var first = document.createElement('h1');
+					first.innerHTML = "NOTE:";
+					aParent.append(first);
+
+					var paragraph = document.createElement('p');
+					paragraph.className = "para";
+					paragraph.innerHTML = "Over there on the far left we've got ourselves a list of cell-organelles(not complete). Just click any of them.";
+					aParent.append(paragraph);
+				}
+
+				contDiv.append(aParent);
+
+				var closeAlert = document.getElementsByClassName('close-alert');
+
+				for (var j = 0; j < closeAlert.length; j++){
+					closeAlert[j].setAttribute("onclick", "hideAlert(this)");
+				}
 			}
-			function instructions(){
-				var aMessage=document.getElementById('instructions');
-				aMessage.style.display="grid";
+			
+			function hideAlert(action){
+					//from w3schools
+					var hideDiv = action.parentElement;
+					hideDiv.style.opacity = "0";
+					setTimeout(function(){ hideDiv.style.display = "none"; }, 600);
 			}
 		</script>
 	</body>
