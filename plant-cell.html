@@ -87,59 +87,47 @@
 
 
 		<!--navigation bar -->
+		<div class="open-icon" onclick="toggleMenu('show')"> &#9776; </div>
 
-		<div id = "containerNav" onclick="toggleNav('close')">
-		</div>
-		<div id = "navBar">
-			<a href = "animal-cell.html"><div id="animal-cell">ANIMAL CELL</div></a>
-			<a><div id="plant-cell">PLANT CELL</div></a>
-			<ul>
-				<li onclick="showCellPart('plasma-membrane');changeMenu('yes')"><a href ="#">plasma mebrane</a></li>
-				<li  onclick="showCellPart('ribosome');changeMenu('yes')"><a>ribsome</a></li>
-				<li  onclick="showCellPart('nucleus');changeMenu('yes')" ><a>nucleus</a></li>
-				<li  onclick="showCellPart('smooth-endoplasmic-reticulum');changeMenu('yes')"><a>smooth endoplasmic reticulum</a></li>
-				<li  onclick="showCellPart('rough-endoplasmic-reticulum');changeMenu('yes')"><a>rough endoplasmic reticulum</a></li>
-				<li  onclick="showCellPart('vacuole');changeMenu('yes')"><a>vacuole</a></li>
-				<li  onclick="showCellPart('mitochondrion');changeMenu('no')"><a>mitochondrion</a></li>
-				<li  onclick="showCellPart('golgi-apparatus');changeMenu('yes')"><a>golgi apparatus</a></li>
-				<li  onclick="showCellPart('lysosome');changeMenu('no')"><a>lysosome</a></li>
-				<li  onclick="showCellPart('peroxisome');changeMenu('no')"><a>peroxisome</a></li>
-				<li  onclick="showCellPart('cell-wall');changeMenu('no')" ><a>cell wall</a></li>
-				<li  onclick="showCellPart('chloroplast');changeMenu('yes')"><a>chloroplast</a></li>
-			</ul>
-			<a href = "about-us.html"><div id="about-us">ABOUT US</div></a>
+		<div class="menu" id="menu">
+			<div id="left">
+				<a href = "animal-cell.html"><div id="animal-cell">ANIMAL CELL</div></a>
+				<a><div id="plant-cell">PLANT CELL</div></a>
+				<ul>
+					<li onclick="showCellPart('plasma-membrane');changeMenu('yes')"><a href ="#">plasma mebrane</a></li>
+					<li  onclick="showCellPart('ribosome');changeMenu('yes')"><a>ribsome</a></li>
+					<li  onclick="showCellPart('nucleus');changeMenu('yes')" ><a>nucleus</a></li>
+					<li  onclick="showCellPart('smooth-endoplasmic-reticulum');changeMenu('yes')"><a>smooth endoplasmic reticulum</a></li>
+					<li  onclick="showCellPart('rough-endoplasmic-reticulum');changeMenu('yes')"><a>rough endoplasmic reticulum</a></li>
+					<li  onclick="showCellPart('vacuole');changeMenu('yes')"><a>vacuole</a></li>
+					<li  onclick="showCellPart('mitochondrion');changeMenu('no')"><a>mitochondrion</a></li>
+					<li  onclick="showCellPart('golgi-apparatus');changeMenu('yes')"><a>golgi apparatus</a></li>
+					<li  onclick="showCellPart('lysosome');changeMenu('no')"><a>lysosome</a></li>
+					<li  onclick="showCellPart('peroxisome');changeMenu('no')"><a>peroxisome</a></li>
+					<li  onclick="showCellPart('cell-wall');changeMenu('no')" ><a>cell wall</a></li>
+					<li  onclick="showCellPart('chloroplast');changeMenu('yes')"><a>chloroplast</a></li>
+				</ul>
+				<a href = "about-us.html"><div id="about-us">ABOUT US</div></a>
+			</div>
+
+			<div class="close-icon" onclick="toggleMenu('hide')"> &times; </div>
 		</div>
 		
-		<div id="menu">
-			<img onclick="toggleNav('show')" id="navBarIcon" src = "svg/menu.svg"/>
-			<span id="title">Eukaryotes</span>
-		</div>
-
 
 		<script> 
-			function toggleNav(action)
-			{
-				if (action == 'close')
-				{
-					var navBar = document.getElementById('navBar');
-					navBar.style.left = "-80%";
-					navBar.style.boxShadow = "0px 0px 0px blue"; 
-					navBar.style.transition = "0.3s";
-					var aContainer = document.getElementById('containerNav');
-					aContainer.style.width = "0px";
-					aContainer.style.transition= "0.3s";
+			function toggleMenu(action){
+				var menuToggle = document.getElementById('menu');
+
+				if (action == 'show'){
+					menuToggle.style.left = "0px";
+					menuToggle.style.boxShadow = "1vw 0vh 10px rgba(141, 141, 141, 0.46)";
 				}
-				else 
-				{
-					var navBar = document.getElementById('navBar');
-					navBar.style.left= "0";
-					navBar.style.transition = "0.3s";
-					navBar.style.boxShadow = "1vw 0vh 10px rgba(141, 141, 141, 0.46)"; 
-					var aContainer = document.getElementById('containerNav');
-					aContainer.style.width = "100vw";
-					aContainer.style.transition= "0.3s";
+				else{
+					menuToggle.style.left = "-80%";
+					menuToggle.style.boxShadow = "0vw 0vh 0px green";
 				}
 			}
+
 			function showCellPart(part)
 			{
 				var aContainer = document.getElementById('image-container');

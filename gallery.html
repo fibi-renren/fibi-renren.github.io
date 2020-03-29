@@ -49,9 +49,35 @@
 		</div>
 
 		<div id="rate-box">
-			
+			<div id="rate-box_content">
+				<span>WE CARE ABOUT WHAT OUR USER THINKS :) </span>
+				<p> By taking the time to answer this very short questionnaire, you are directly helping us in our efforts to improve the website !!</p>
+
+				<div id="rate-box_content_checklist">
+					<span> please rate your experience: </span>
+					
+					<div>
+						<input type="radio" name="rating" id="excellent">
+						<label for="excellent" onclick="createAlert('green')">Excellent</label>
+					</div>
+
+					<div>
+						<input type="radio" name="rating" id="good">
+						<label for="good" onclick="createAlert('red')">Good</label>
+					</div>
+
+					<div>
+						<input type="radio" name="rating" id="poor">
+						<label for="poor" onclick="createAlert('red')">Poor</label>
+					</div>
+				</div>
+
+				<div class="alert-container" id="alert-container">
+				
+				</div>
 
 
+			</div>	
 		</div>
 
 		<script type="text/javascript">
@@ -83,9 +109,83 @@
 				}
 
 			}
+			var contDiv = document.getElementById('alert-container');
+			function createAlert(color){
+				var aParent = document.createElement('div');
 
+				if ((color == 'green' || color == 'red')){
 
+					if (color == 'green'){
+						aParent.className = "alert success";
 
+						var span = document.createElement('span');
+						span.className = "close-alert";
+						span.innerHTML = "&times;";
+						aParent.append(span);
+
+						var first = document.createElement('h1');
+						first.innerHTML = "SUCCESS!";
+						aParent.append(first);
+
+						var paragraph = document.createElement('p');
+						paragraph.className = "para";
+						paragraph.innerHTML = "Thank you for your input.";
+						aParent.append(paragraph);
+
+					}
+					
+					else {
+					aParent.className = "alert error";
+
+					var span = document.createElement('span');
+					span.className = "close-alert";
+					span.innerHTML = "&times;";
+					aParent.append(span);
+
+					var first = document.createElement('h1');
+					first.innerHTML = "ERROR!";
+					aParent.append(first);
+
+					var paragraph = document.createElement('p');
+					paragraph.className = "para";
+					paragraph.innerHTML = "Oh! You misclicked there, buddy. We believe you meant to click 'excellent' :)";
+					aParent.append(paragraph);
+
+					}
+				}
+				else{
+					aParent.className = "alert note";
+
+					var span = document.createElement('span');
+					span.className = "close-alert";
+					span.innerHTML = "&times;";
+					aParent.append(span);
+
+					var first = document.createElement('h1');
+					first.innerHTML = "NOTE:";
+					aParent.append(first);
+
+					var paragraph = document.createElement('p');
+					paragraph.className = "para";
+					paragraph.innerHTML = "Over there on the far left we've got ourselves a list of cell organelles (not complete). Just click any of them.";
+					aParent.append(paragraph);
+				}
+
+				contDiv.append(aParent);
+
+				var closeAlert = document.getElementsByClassName('close-alert');
+
+				for (var j = 0; j < closeAlert.length; j++){
+					closeAlert[j].setAttribute("onclick", "hideAlert(this)");
+				}
+			}
+			
+			function hideAlert(action){
+					//from w3schools
+					var hideDiv = action.parentElement;
+					hideDiv.style.opacity = "0";
+					setTimeout(function(){ hideDiv.style.display = "none"; }, 600);
+			}
 		</script>
 	</body>
 </html>
